@@ -1,0 +1,477 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://thefa.kr/contact.html"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="THE FA"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta property="og:url" content="https://thefa.kr/contact.html"/>
+<meta property="og:image" content="https://thefa.kr/assets/brand/og-thefa.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="description" content="THE FA(주식회사 더파) 협력 문의. 이메일로 담당자에게 직접 연결됩니다."/>
+<meta property="og:title" content="협력 문의 — THE FA"/>
+<meta property="og:description" content="매장·프랜차이즈, 기술·데이터, 콘텐츠·커머스, 기업 운영 협력을 준비합니다."/>
+<title>협력 문의 — THE FA</title>
+<link rel="stylesheet" href="styles.css?v=5"/>
+<link rel="icon" href="assets/approved/thefa-logo.png"/>
+<style>
+  .contact-hero {
+    padding: 96px 0 40px;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line-2);
+  }
+  .contact-hero h1 {
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.14; letter-spacing: -.025em;
+    margin: 0 0 12px; font-weight: 800;
+  }
+  .contact-hero p.lead {
+    font-size: clamp(15px, 1.2vw, 17px); color: var(--muted);
+    margin: 0; max-width: 640px; line-height: 1.7;
+  }
+  .contact-hero .eyebrow {
+    display: inline-block; font-family: ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size: 12px; font-weight: 800; letter-spacing: .1em;
+    color: var(--gold-text); margin-bottom: 12px; text-transform: uppercase;
+  }
+  .contact-body { padding: 72px 0 96px; }
+  .contact-grid {
+    display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr);
+    gap: 48px; align-items: start;
+  }
+  @media (max-width: 900px) { .contact-grid { grid-template-columns: 1fr; gap: 32px; } }
+
+  .form-card {
+    background: #fff; border: 1px solid var(--line-2);
+    border-radius: 16px; padding: 36px;
+  }
+  .form-row { margin-bottom: 20px; }
+  .form-row label {
+    display: block; font-size: 13px; font-weight: 700;
+    color: var(--ink); margin-bottom: 8px;
+    letter-spacing: -.005em;
+  }
+  .form-row label .req { color: #c34a4a; margin-left: 4px; }
+  .form-row input,
+  .form-row select,
+  .form-row textarea {
+    width: 100%; padding: 12px 14px;
+    border: 1px solid var(--line);
+    border-radius: 10px; font-size: 15px;
+    color: var(--ink); background: #fff;
+    font-family: inherit; line-height: 1.55;
+    -webkit-appearance: none; appearance: none;
+    transition: border-color .15s, background .15s;
+  }
+  .form-row input:focus,
+  .form-row select:focus,
+  .form-row textarea:focus {
+    outline: none; border-color: var(--ink);
+    box-shadow: 0 0 0 3px rgba(248,182,43,.25);
+  }
+  .form-row select {
+    background: #fff url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'><path fill='none' stroke='%23171817' stroke-width='2' d='M1 1l5 5 5-5'/></svg>") no-repeat right 14px center;
+    padding-right: 42px;
+  }
+  .form-row textarea { min-height: 160px; resize: vertical; }
+  .form-hint { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+
+  .form-agree {
+    display: flex; align-items: flex-start; gap: 10px;
+    padding: 14px 16px; background: var(--paper);
+    border-radius: 10px; margin: 8px 0 20px;
+    font-size: 14px; color: var(--ink-2); line-height: 1.55;
+  }
+  .form-agree input { margin-top: 3px; flex-shrink: 0; }
+
+  .form-actions {
+    display: flex; gap: 12px; flex-wrap: wrap;
+    margin-top: 24px; padding-top: 22px;
+    border-top: 1px solid var(--line-2);
+  }
+  .btn-submit {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 14px 24px; background: var(--ink); color: #fff;
+    border: 0; border-radius: 999px;
+    font-size: 15px; font-weight: 700; cursor: pointer;
+    transition: background .15s;
+  }
+  .btn-submit:hover { background: var(--ink-2); }
+  .btn-submit:disabled { opacity: .5; cursor: not-allowed; }
+  .btn-submit::after { content: " →"; }
+
+  .form-notice {
+    padding: 16px 18px; background: var(--paper);
+    border-left: 3px solid var(--gold); border-radius: 0 10px 10px 0;
+    font-size: 13px; color: var(--ink-3); line-height: 1.6;
+    margin-top: 14px;
+  }
+  .form-notice b { color: var(--ink); }
+
+  .contact-side { display: flex; flex-direction: column; gap: 20px; }
+  .contact-side .card {
+    padding: 26px; border: 1px solid var(--line-2);
+    background: #fff; border-radius: 14px;
+  }
+  .contact-side h3 {
+    font-size: 15px; font-weight: 700;
+    letter-spacing: .04em; color: var(--muted);
+    text-transform: uppercase; margin: 0 0 12px;
+    font-family: ui-monospace,SFMono-Regular,Menlo,monospace;
+  }
+  .contact-side .method {
+    display: block; padding: 8px 0;
+    font-size: 15px; color: var(--ink);
+    text-decoration: none; font-weight: 600;
+    border-bottom: 1px solid var(--line-2);
+  }
+  .contact-side .method:last-child { border-bottom: 0; }
+  .contact-side .method:hover { color: var(--gold-text); }
+  .contact-side .method small {
+    display: block; font-size: 12px; color: var(--muted);
+    font-weight: 500; margin-top: 2px;
+  }
+  .contact-side address {
+    font-style: normal; font-size: 14px;
+    color: var(--ink-3); line-height: 1.7;
+  }
+  .contact-side address b { color: var(--ink); font-weight: 700; }
+
+  .partner-tags {
+    display: flex; flex-wrap: wrap; gap: 8px;
+    margin-top: 14px;
+  }
+  .partner-tags .tag {
+    padding: 5px 12px; border-radius: 999px;
+    background: var(--paper); color: var(--ink-2);
+    border: 1px solid var(--line);
+    font-size: 13px; font-weight: 600;
+  }
+
+  /* 전송 후 안내 (기본 숨김) */
+  .form-sent {
+    display: none;
+    padding: 32px; background: #f2f7ee;
+    border: 1px solid #cbd9ba; border-radius: 14px;
+    text-align: center;
+  }
+  .form-sent[hidden] { display: none !important; }
+  .form-sent.show { display: block; }
+  .form-sent h3 {
+    margin: 0 0 8px; font-size: 20px; color: #2b5a1c;
+    letter-spacing: -.01em;
+  }
+  .form-sent p { margin: 0; color: var(--ink-3); font-size: 15px; line-height: 1.65; }
+</style>
+</head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <nav class="nav" aria-label="주 메뉴">
+      <a class="brand" href="index.html" aria-label="THE FA 홈">
+        <img src="assets/approved/thefa-logo.png" alt="THE FA" width="96"/>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="index.html#patents">기술 자산</a></li>
+        <li><a href="index.html#research">R&amp;D</a></li>
+        <li><a href="technology/">기술·개발</a></li>
+        <li><a href="index.html#products">제품</a></li>
+        <li><a href="index.html#roadmap">개발 단계</a></li>
+        <li><a href="index.html#company">회사</a></li>
+      </ul>
+      <a class="nav-cta" href="contact.html" aria-current="page">협력 문의</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <div class="nav-panel" id="nav-panel" style="display:none">
+    <ul>
+      <li><a href="index.html#patents">기술 자산</a></li>
+      <li><a href="index.html#research">R&amp;D</a></li>
+      <li><a href="technology/">기술·개발</a></li>
+      <li><a href="index.html#products">제품</a></li>
+      <li><a href="index.html#roadmap">개발 단계</a></li>
+      <li><a href="index.html#company">회사</a></li>
+      <li><a href="contact.html" data-cta aria-current="page">협력 문의</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="contact-hero">
+  <div class="wrap">
+    <span class="eyebrow">CONTACT</span>
+    <h1>협력 문의</h1>
+    <p class="lead">
+      매장·프랜차이즈 도입, 기술·데이터 협력, 콘텐츠·커머스 협력, 기업 운영·개발 생산성 협력에
+      관심 있는 파트너를 기다립니다. 아래 폼을 제출하시면 <b><a href="mailto:thefa@thefa.kr">thefa@thefa.kr</a></b>과
+      <b><a href="mailto:good24c@gmail.com">good24c@gmail.com</a></b> 두 담당 메일함으로 함께 전달됩니다.
+    </p>
+  </div>
+</section>
+
+<section class="contact-body">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- 왼쪽 : 문의 폼 -->
+      <div>
+        <form class="form-card" id="contactForm"
+              action="https://formspree.io/f/mkjwwqaw"
+              method="POST"
+              novalidate>
+          <div class="form-row">
+            <label for="name">이름 <span class="req">*</span></label>
+            <input id="name" name="name" type="text" required autocomplete="name"
+                   placeholder="담당자 성함"/>
+          </div>
+
+          <div class="form-row">
+            <label for="company">회사 · 소속</label>
+            <input id="company" name="company" type="text" autocomplete="organization"
+                   placeholder="예) OO그룹 · 프랜차이즈 본사"/>
+          </div>
+
+          <div class="form-row">
+            <label for="email">이메일 <span class="req">*</span></label>
+            <input id="email" name="email" type="email" required autocomplete="email"
+                   placeholder="회신 받으실 이메일"/>
+          </div>
+
+          <div class="form-row">
+            <label for="phone">연락처</label>
+            <input id="phone" name="phone" type="tel" autocomplete="tel"
+                   placeholder="선택 · 010-0000-0000"/>
+          </div>
+
+          <div class="form-row">
+            <label for="topic">문의 분야 <span class="req">*</span></label>
+            <select id="topic" name="topic" required>
+              <option value="">선택해 주세요</option>
+              <option value="매장·프랜차이즈 도입">매장·프랜차이즈 도입</option>
+              <option value="기술·데이터 협력">기술·데이터 협력</option>
+              <option value="콘텐츠·커머스 협력">콘텐츠·커머스 협력</option>
+              <option value="기업 운영·개발 생산성 협력">기업 운영·개발 생산성 협력</option>
+              <option value="투자·IR">투자·IR</option>
+              <option value="채용·인재 협업">채용·인재 협업</option>
+              <option value="기타">기타</option>
+            </select>
+          </div>
+
+          <div class="form-row">
+            <label for="message">문의 내용 <span class="req">*</span></label>
+            <textarea id="message" name="message" required
+                      placeholder="협력 목적, 함께하고 싶은 범위, 참고 링크가 있으면 함께 남겨 주세요."></textarea>
+            <p class="form-hint">담당자 검토 후 영업일 기준 2일 이내 회신드립니다.</p>
+          </div>
+
+          <!-- Formspree 부가 필드 -->
+          <input type="hidden" name="_subject" id="_subject" value="[협력 문의] THE FA 홈페이지"/>
+          <input type="text" name="_gotcha" tabindex="-1" autocomplete="off"
+                 style="position:absolute;left:-9999px;width:1px;height:1px;opacity:0" aria-hidden="true"/>
+
+          <label class="form-agree" for="agree">
+            <input id="agree" name="agree" type="checkbox" required value="동의"/>
+            <span>
+              입력하신 정보는 회신 목적으로만 사용되며, 폼 전송 서비스(Formspree)를 거쳐 담당자 메일함으로 전달됩니다.
+              <a href="privacy.html" style="color:var(--gold-text);font-weight:700">개인정보처리방침</a>에 동의합니다.
+            </span>
+          </label>
+
+          <div class="form-actions">
+            <button class="btn-submit" type="submit" id="submitBtn">문의 보내기</button>
+            <a class="btn light" href="mailto:thefa@thefa.kr?cc=good24c@gmail.com&amp;subject=%5B%ED%98%91%EB%A0%A5%20%EB%AC%B8%EC%9D%98%5D%20" style="align-self:center">이메일로 직접 보내기</a>
+          </div>
+
+          <p class="form-notice">
+            <b>안내</b> · 회신은 입력하신 이메일 주소로 드립니다. 개인정보는 회신 목적으로만 사용되며 별도 마케팅 활용은 없습니다.
+          </p>
+        </form>
+
+        <div class="form-sent" id="formSent" role="status" aria-live="polite">
+          <h3>문의를 접수했습니다.</h3>
+          <p>
+            담당자 검토 후 영업일 기준 2일 이내 입력하신 이메일 주소로 회신드리겠습니다.<br/>
+            급한 사안은 <a href="tel:0506-932-7908"><b>0506-932-7908</b></a>으로 연락 주십시오.
+          </p>
+        </div>
+
+        <div class="form-sent" id="formError" role="alert" aria-live="assertive"
+             style="background:#fbe9e9;border-color:#e0b7b7">
+          <h3 style="color:#8a2a2a">전송에 실패했습니다.</h3>
+          <p>
+            일시적인 네트워크 문제일 수 있습니다. 잠시 후 다시 시도해 주시거나,
+            <a href="mailto:thefa@thefa.kr?cc=good24c@gmail.com"><b>thefa@thefa.kr</b></a>로 직접 보내 주세요.
+          </p>
+        </div>
+      </div>
+
+      <!-- 오른쪽 : 연락처 카드 -->
+      <aside class="contact-side">
+        <div class="card">
+          <h3>이메일 / 전화</h3>
+          <a class="method" href="mailto:thefa@thefa.kr?cc=good24c@gmail.com&amp;subject=%5B%ED%98%91%EB%A0%A5%20%EB%AC%B8%EC%9D%98%5D%20">
+            thefa@thefa.kr
+            <small>공식 협력 문의 · good24c@gmail.com 참조 자동 포함</small>
+          </a>
+          <a class="method" href="mailto:good24c@gmail.com?cc=thefa@thefa.kr&amp;subject=%5B%ED%98%91%EB%A0%A5%20%EB%AC%B8%EC%9D%98%5D%20">
+            good24c@gmail.com
+            <small>대표 담당 · thefa@thefa.kr 참조 자동 포함</small>
+          </a>
+          <a class="method" href="tel:0506-932-7908">
+            0506-932-7908
+            <small>대표 전화</small>
+          </a>
+        </div>
+
+        <div class="card">
+          <h3>주소</h3>
+          <address>
+            <b>주식회사 더파 (The FA Co., Ltd.)</b><br/>
+            대표이사 최대희<br/>
+            사업자등록번호 186-87-03729<br/>
+            경기 성남시 분당구 판교역로10번길 6 (백현동)
+          </address>
+        </div>
+
+        <div class="card">
+          <h3>협력 분야</h3>
+          <div class="partner-tags">
+            <span class="tag">매장·프랜차이즈</span>
+            <span class="tag">기술·데이터</span>
+            <span class="tag">콘텐츠·커머스</span>
+            <span class="tag">기업 운영</span>
+            <span class="tag">투자·IR</span>
+            <span class="tag">채용</span>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="assets/approved/thefa-logo.png" alt="THE FA"/>
+        <p>오프라인 사업의 운영 신호를 검증 가능한 데이터와 실행으로 잇는 데이터 인프라를 연구·개발합니다.</p>
+        <address style="margin-top:18px;font-style:normal;font-size:13px;color:#8f9188;line-height:1.7">
+          주식회사 더파 (The FA Co., Ltd.) · 대표 최대희<br/>
+          사업자등록번호 186-87-03729<br/>
+          경기 성남시 분당구 판교역로10번길 6 (백현동)<br/>
+          전화 <a href="tel:0506-932-7908" style="color:inherit">0506-932-7908</a> ·
+          이메일 <a href="mailto:thefa@thefa.kr" style="color:inherit;text-decoration:underline">thefa@thefa.kr</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>제품</h4>
+        <ul>
+          <li><a href="products/dangolreturn.html">단골리턴</a></li>
+          <li><a href="products/franchise-hq.html">프랜차이즈 본사</a></li>
+          <li><a href="products/control-tower.html">Control Tower</a></li>
+          <li><a href="products/gov-workspace.html">정부지원사업 업무센터</a></li>
+          <li><a href="products/hi-the-fa.html">하이 더파</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>더 보기</h4>
+        <ul>
+          <li><a href="products/ai-persona.html">인공지능 분신·톡비서</a></li>
+          <li><a href="products/visual-studio.html">Visual Studio</a></li>
+          <li><a href="products/sangmi.html">상미</a></li>
+          <li><a href="products/sangmi-2.html">상미 2.0 토탈 스타일 (시안)</a></li>
+          <li><a href="products/ai-marketing.html">마케팅·소셜 성장</a></li>
+          <li><a href="products/payments-finance.html">결제·크레딧·정산</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>회사</h4>
+        <ul>
+          <li><a href="index.html#patents">기술 자산 · 특허출원 4건</a></li>
+          <li><a href="index.html#research">R&amp;D</a></li>
+          <li><a href="index.html#company">회사 소개</a></li>
+          <li><a href="contact.html" aria-current="page">협력 문의</a></li>
+          <li><a href="privacy.html">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 주식회사 더파 · The FA Co., Ltd. All rights reserved.</div>
+      <div class="legal">
+        <span>기준일 2026·09·14</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="app.js?v=4b"></script>
+<script>
+  // Formspree 연동: 페이지 이동 없이 AJAX로 전송, 성공/실패에 따라 안내 노출
+  (function(){
+    var form = document.getElementById('contactForm');
+    var sent = document.getElementById('formSent');
+    var err  = document.getElementById('formError');
+    var btn  = document.getElementById('submitBtn');
+    if (!form) return;
+
+    form.addEventListener('submit', function(e){
+      e.preventDefault();
+      // HTML 기본 검증
+      if (!form.checkValidity()) {
+        form.reportValidity();
+        return;
+      }
+
+      // 사용자 편의: 회신 주소를 replyto로도 세팅
+      var replyto = form.querySelector('#_replyto');
+      if (replyto) replyto.value = form.email.value.trim();
+
+      // 이전 안내 숨김
+      sent.classList.remove('show');
+      err.classList.remove('show');
+
+      // 버튼 비활성화 + 진행 표시
+      var origText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '전송 중…';
+
+      var data = new FormData(form);
+
+      fetch(form.action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      }).then(function(res){
+        if (res.ok) {
+          form.reset();
+          sent.classList.add('show');
+          sent.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        } else {
+          return res.json().then(function(j){
+            throw new Error((j && j.errors && j.errors[0] && j.errors[0].message) || 'submit failed');
+          });
+        }
+      }).catch(function(){
+        err.classList.add('show');
+        err.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }).finally(function(){
+        btn.disabled = false;
+        btn.textContent = origText;
+      });
+    });
+  })();
+</script>
+</body>
+</html>

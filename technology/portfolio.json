@@ -1,0 +1,1056 @@
+{
+  "_about": "THE FA 기술·개발자산 포트폴리오 데이터. 수정 후 `node scripts/build-technology.mjs` 로 technology/index.html 을 다시 생성합니다.",
+  "meta": {
+    "title": "THE FA Technology & Development Asset Portfolio · 2026-09-17",
+    "description": "THE FA 기술·개발자산, 서비스 도메인, 인프라 및 개발도구 통합 포트폴리오"
+  },
+  "nav": [
+    {
+      "href": "#sec-01",
+      "label": "Core"
+    },
+    {
+      "href": "#sec-02",
+      "label": "Asset & QA"
+    },
+    {
+      "href": "#sec-03",
+      "label": "Business"
+    },
+    {
+      "href": "#sec-04",
+      "label": "Platform"
+    },
+    {
+      "href": "#sec-05",
+      "label": "단골리턴"
+    },
+    {
+      "href": "#services",
+      "label": "서비스/도메인"
+    },
+    {
+      "href": "#infra",
+      "label": "인프라"
+    },
+    {
+      "href": "#tools",
+      "label": "개발도구"
+    }
+  ],
+  "hero": {
+    "kicker": "Technology & Development Asset Portfolio · 2026.09.17",
+    "titleLines": [
+      "기능이 아니라",
+      "회사 기술자산으로 관리합니다."
+    ],
+    "lead": "THE FA가 실제로 개발했거나 공식 개발 중인 제품·플랫폼·내부 인프라를 Canonical Asset 기준으로 정리했습니다. 브랜치·버전·임시명은 중복 집계하지 않으며, 검증 상태와 실제 기능을 분리해 표시합니다.",
+    "notes": [
+      "공식 Registry 45",
+      "Runtime 검증 7",
+      "QA 검증 8",
+      "개발 중 26",
+      "회귀 수정 1",
+      "개발 예정 3"
+    ],
+    "metrics": [
+      {
+        "value": "45",
+        "label": "공식 개발자산"
+      },
+      {
+        "value": "15",
+        "label": "QA 이상 검증자산"
+      },
+      {
+        "value": "5",
+        "label": "핵심 제품·플랫폼 축"
+      },
+      {
+        "value": "10+",
+        "label": "회수·연구 대표후보"
+      }
+    ],
+    "sourceNote": "난이도는 상대평가입니다. 데이터·보안·동시성·외부연동·상태머신·QA 범위를 함께 고려했습니다."
+  },
+  "toolbar": {
+    "searchPlaceholder": "개발품명·기능·Asset Key 검색",
+    "filters": [
+      {
+        "value": "ALL",
+        "label": "전체"
+      },
+      {
+        "value": "RUNTIME_VERIFIED",
+        "label": "운영 검증"
+      },
+      {
+        "value": "QA_VERIFIED",
+        "label": "QA 검증"
+      },
+      {
+        "value": "IN_DEVELOPMENT",
+        "label": "개발 중"
+      },
+      {
+        "value": "REGRESSION_OPEN",
+        "label": "회귀 수정"
+      },
+      {
+        "value": "PROPOSED",
+        "label": "예정"
+      }
+    ]
+  },
+  "statusKeys": {
+    "runtime": "RUNTIME_VERIFIED",
+    "dev": "IN_DEVELOPMENT",
+    "qa": "QA_VERIFIED",
+    "prop": "PROPOSED",
+    "reg": "REGRESSION_OPEN"
+  },
+  "sections": [
+    {
+      "id": "sec-01",
+      "no": "01",
+      "title": "Company Core & Continuity",
+      "summary": "회사기억·승계·문맥·변경안전을 담당하는 내부 기술 기반",
+      "countLabel": "12 assets",
+      "category": "Company Core & Continuity",
+      "assets": [
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Associative Memory Engine V1",
+          "key": "THE_FA_ASSOCIATIVE_MEMORY_ENGINE_V1",
+          "description": "정확 검색·전문 검색·주제·관계 그래프를 결합해, 모호한 과거 기억에서도 관련 업무와 증거를 회수하는 연상형 기억 엔진.",
+          "effectLabel": "회사 효과",
+          "effect": "방 교체와 장기 프로젝트에서 과거 개발·결정·근거를 빠르게 복원합니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Chat Archive Index V1",
+          "key": "THE_FA_CHAT_ARCHIVE_INDEX_V1",
+          "description": "대규모 대화 아카이브를 원본 해시·대화/메시지 출처와 함께 색인해 밀리초 단위 검색을 지원하는 로컬 인덱스.",
+          "effectLabel": "회사 효과",
+          "effect": "과거 대화를 매번 다시 읽지 않고 필요한 증거만 빠르게 찾습니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Conversation Archive Backfill V1",
+          "key": "THE_FA_CONVERSATION_ARCHIVE_BACKFILL_V1",
+          "description": "과거 전체 대화 Export를 무결성 검증하고 방·프로젝트에 매핑한 뒤 Company Memory HISTORY로 안전하게 복구하는 파이프라인.",
+          "effectLabel": "회사 효과",
+          "effect": "과거 개발흔적과 대표 결정을 장기 회사기억으로 복구합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Capture Retry Outbox V1",
+          "key": "COMPANY_MEMORY_CAPTURE_RETRY_OUTBOX_V1",
+          "description": "기억 저장 실패가 대화를 막지 않도록 재시도·지수 백오프·stale claim 복구·dead-letter를 처리하는 비동기 저장 복구 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "회사기억 저장 장애와 사용자 응답을 분리해 운영 안정성을 높입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Fast Succession One-Call Boot V1",
+          "key": "THE_FA_FAST_SUCCESSION_ONE_CALL_BOOT_V1",
+          "description": "전체 History를 다시 재생하지 않고 Core 1회 조회로 새 방이 현재 업무를 빠르게 이어받도록 하는 승계 부팅 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "대화방 교체 시 재탐색·대기시간을 크게 줄입니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "FAST Succession P0 V1",
+          "key": "FAST_SUCCESSION_P0_V1",
+          "description": "Fast Boot와 strict completion을 분리하고 exact-head QA 재사용, 승계 전용 canary, 중단 후 resume를 통합한 실전 승계 고도화.",
+          "effectLabel": "회사 효과",
+          "effect": "승계가 일반개발로 잘못 넘어가거나 검증이 빠지는 문제를 줄입니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Strict Succession Local Writer Compatibility V1",
+          "key": "STRICT_SUCCESSION_LOCAL_WRITER_COMPAT_V1",
+          "description": "단일 writer lease·fencing identity를 유지하면서 로컬 개발 실행과 strict succession이 충돌하지 않도록 하는 호환 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "여러 실행환경이 있어도 실제 코드 writer를 하나로 유지합니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Zero-Handoff Continuity Fabric V1",
+          "key": "ZERO_HANDOFF_CONTINUITY_FABRIC_V1",
+          "description": "Client Attachment·bounded context compiler·steer queue·resume를 결합해 새 세션이 현재 workstream 문맥에 즉시 붙도록 하는 연속성 패브릭.",
+          "effectLabel": "회사 효과",
+          "effect": "수동 승계 부담을 줄이고 장기개발의 문맥 단절을 최소화합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Delta Context Router V1",
+          "key": "DELTA_CONTEXT_ROUTER_V1",
+          "description": "전체 원문 대신 구조화된 변경점만 전달해 필요한 시스템에 최소 문맥을 공급하는 컨텍스트 라우터.",
+          "effectLabel": "회사 효과",
+          "effect": "전사 문맥 전송량을 줄이고 오래된 상태 사용을 방지합니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Global Directive + Work Unit Boundary P0",
+          "key": "GLOBAL_DIRECTIVE_IDENTITY_WORKUNIT_P0_V1",
+          "description": "전사 공지·명령의 대상·revision·delta·ACK와 한 번의 작업단위 경계를 canonical project/room 기준으로 관리하는 제어계층.",
+          "effectLabel": "회사 효과",
+          "effect": "전사명령 누락·중복 ACK·프로젝트 혼선을 줄입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Multi-System Disagreement Ledger V1",
+          "key": "MULTI_AI_DISAGREEMENT_LEDGER_V1",
+          "description": "자료 불일치와 판단 불일치를 분리 기록하고, 고위험 충돌은 대표 결정이 필요하도록 올리는 판단 불일치 원장.",
+          "effectLabel": "회사 효과",
+          "effect": "여러 분석 시스템의 합의만으로 권한이나 CURRENT가 바뀌는 것을 막습니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Mutation Fence Guard V2",
+          "key": "MUTATION_FENCE_GUARD_V2",
+          "description": "쓰기 직전에 CURRENT·writer·fence·소유경로·Fresh HEAD·idempotency를 검증하는 변경 안전 게이트.",
+          "effectLabel": "회사 효과",
+          "effect": "동시개발·오래된 writer·중복 실행이 코드를 덮는 사고를 차단합니다.",
+          "status": "QA_VERIFIED"
+        }
+      ]
+    },
+    {
+      "id": "sec-02",
+      "no": "02",
+      "title": "Asset & Quality Infrastructure",
+      "summary": "개발자산을 발견·검증·분류·재사용하고 품질증거를 관리",
+      "countLabel": "12 assets",
+      "category": "Asset & Quality Infrastructure",
+      "assets": [
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Development Asset Registry V1",
+          "key": "THE_FA_DEVELOPMENT_ASSET_REGISTRY_V1",
+          "description": "서비스·기능·도구·자동화·연동을 제안부터 개발·검증·회귀·폐기까지 중앙 상태로 관리하는 공식 자산원장.",
+          "effectLabel": "회사 효과",
+          "effect": "개발품이 방 교체 과정에서 사라지지 않고 회사 자산으로 누적됩니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Development Asset Candidate Ledger V1",
+          "key": "THE_FA_DEVELOPMENT_ASSET_CANDIDATE_LEDGER_V1",
+          "description": "검색·코드·기억에서 발견된 흔적을 공식자산과 분리해 검증 전 후보로 안전하게 보관하는 원장.",
+          "effectLabel": "회사 효과",
+          "effect": "환경변수·옛 코드·검색 노이즈가 공식자산으로 잘못 승격되는 것을 방지합니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Master Development Asset Map V1",
+          "key": "THE_FA_MASTER_DEVELOPMENT_ASSET_MAP_V1",
+          "description": "공식자산·회수 구현·후보·별칭·증거를 branch/version 중복 없이 canonical asset 기준으로 연결하는 회사 전체 자산지도.",
+          "effectLabel": "회사 효과",
+          "effect": "전사 기술 포트폴리오를 한 기준으로 추적합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 3,
+          "difficultyLabel": "중간",
+          "name": "Master Development Asset Classification V1",
+          "key": "THE_FA_MASTER_DEVELOPMENT_ASSET_CLASSIFICATION_V1",
+          "description": "회사 개발자산을 완료·개발중·회귀·예정·회수·재검증·연구 상태로 정규 분류하는 기준표.",
+          "effectLabel": "회사 효과",
+          "effect": "대표와 개발방이 같은 상태 언어로 자산을 봅니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Asset Alias Resolver V1",
+          "key": "THE_FA_ASSET_ALIAS_RESOLVER_V1",
+          "description": "옛 이름·새 이름·사용자 표현·모듈명을 deterministic canonical asset으로 해석하고 충돌은 fail-closed 하는 중앙 별칭 해석기.",
+          "effectLabel": "회사 효과",
+          "effect": "동일기술 중복집계·중복개발·승계 누락을 방지합니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Asset Promotion Gate V1",
+          "key": "THE_FA_ASSET_PROMOTION_GATE_V1",
+          "description": "후보를 Alias 중복·Fresh GitHub·exact-head QA·Runtime 증거로 검증한 뒤에만 공식 Registry로 승격하는 fail-closed 게이트.",
+          "effectLabel": "회사 효과",
+          "effect": "검증되지 않은 흔적이 공식 기술자산으로 과장되는 일을 구조적으로 막습니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "qa",
+          "statusLabel": "QA 검증",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Portfolio Recovery Audit V1",
+          "key": "THE_FA_PORTFOLIO_RECOVERY_AUDIT_V1",
+          "description": "로컬 파일색인·코드검색·Git·Company Memory를 결합해 과거 개발품 후보를 전수 복구하는 감사 체계.",
+          "effectLabel": "회사 효과",
+          "effect": "이미 만든 기능과 도구의 누락을 중앙 원장으로 회수합니다.",
+          "status": "QA_VERIFIED"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Central PC QA Worker Google V2",
+          "key": "THE_FA_QA_PC_WORKER_GOOGLE_V2",
+          "description": "exact-head 중앙 PC QA와 Google fallback을 동일 계약으로 실행하고 검증 영수증을 남기는 공용 품질검증 Worker.",
+          "effectLabel": "회사 효과",
+          "effect": "모든 개발방이 같은 QA 기준과 증거를 재사용합니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "runtime",
+          "statusLabel": "운영 검증",
+          "difficultyLevel": 3,
+          "difficultyLabel": "중간",
+          "name": "Local Fast Search V1",
+          "key": "THE_FA_LOCAL_FAST_SEARCH_V1",
+          "description": "Everything 경로색인과 ripgrep 내용검색을 결합해 로컬 Git·파일·코드를 빠르게 찾는 개발 탐색기.",
+          "effectLabel": "회사 효과",
+          "effect": "승계·복구·코드탐색 시간을 단축합니다.",
+          "status": "RUNTIME_VERIFIED"
+        },
+        {
+          "statusClass": "prop",
+          "statusLabel": "개발 예정",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Global Directive Receipt Guard V1",
+          "key": "THE_FA_GLOBAL_DIRECTIVE_RECEIPT_GUARD_V1",
+          "description": "Core 등록 영수증 없이는 전사 공지·명령 완료로 보고하지 못하게 하는 보호장치.",
+          "effectLabel": "회사 효과",
+          "effect": "말로만 공지가 완료되고 실제 중앙 기록이 빠지는 사고를 막습니다.",
+          "status": "PROPOSED"
+        },
+        {
+          "statusClass": "prop",
+          "statusLabel": "개발 예정",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Change Subscriptions V1",
+          "key": "MCP_CHANGE_SUBSCRIPTIONS_V1",
+          "description": "CURRENT·writer·QA·전사명령 변화가 생기면 관련 소비자에게 refresh hint를 전달하는 변경 구독 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "반복 polling과 stale 상태 사용을 줄이는 것이 목표입니다.",
+          "status": "PROPOSED"
+        },
+        {
+          "statusClass": "prop",
+          "statusLabel": "개발 예정",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Incremental Asset Recovery V1",
+          "key": "THE_FA_INCREMENTAL_ASSET_RECOVERY_V1",
+          "description": "초기 전수복구 뒤에는 새 Git diff와 Company Memory 이벤트만 증분 스캔해 자산상태를 갱신하는 자동 회수기.",
+          "effectLabel": "회사 효과",
+          "effect": "전 PC·전 저장소를 매번 다시 훑지 않고 자산원장을 최신으로 유지하는 것이 목표입니다.",
+          "status": "PROPOSED"
+        }
+      ]
+    },
+    {
+      "id": "sec-03",
+      "no": "03",
+      "title": "Business Operations",
+      "summary": "회사 운영·재무·정부지원·영업을 자동화하는 Business OS",
+      "countLabel": "6 assets",
+      "category": "Business Operations",
+      "assets": [
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "THE FA Control Tower V3",
+          "key": "THE_FA_CONTROL_TOWER_V3",
+          "description": "회사 서비스·직원·업무·데이터·보안·재무·영업·연속성 상태를 한 곳에서 관제하는 전사 운영 허브.",
+          "effectLabel": "회사 효과",
+          "effect": "대표가 회사 운영상태를 한 화면에서 파악하는 기반입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Control Tower Staff & Access OS V1",
+          "key": "THE_FA_CONTROL_TOWER_STAFF_ACCESS_OS_V1",
+          "description": "직원 초대·프로필·역할·권한·재직상태·감사기록을 중앙에서 관리하는 조직 접근제어 모듈.",
+          "effectLabel": "회사 효과",
+          "effect": "조직 확장 시 권한과 책임을 안전하게 관리합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Finance & Accounting OS V1",
+          "key": "THE_FA_FINANCE_ACCOUNTING_OS_V1",
+          "description": "은행·법인카드·PG정산·세금계산서·증빙·대사·세무사 전달을 연결하는 재무·회계 자동화 기반.",
+          "effectLabel": "회사 효과",
+          "effect": "재무 운영시간과 증빙 누락 위험을 줄입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "정부지원사업 자동화 RD V1",
+          "key": "THE_FA_GOVERNMENT_SUPPORT_AUTOMATION_RD_V1",
+          "description": "공고수집→회사자료→신청서→첨부→제출준비→결과→실패분석→재신청으로 이어지는 정부지원사업 운영 자동화.",
+          "effectLabel": "회사 효과",
+          "effect": "지원사업 탐색·작성·후속관리 반복업무를 줄입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Sales Autopilot V1",
+          "key": "THE_FA_SALES_AUTOPILOT_V1",
+          "description": "Lead→검증→개인화→메일→회신→후속→미팅→Pilot까지 B2B 영업흐름을 연결하는 영업자동화.",
+          "effectLabel": "회사 효과",
+          "effect": "소수 인력으로 B2B 영업 처리량을 확장합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Free Analysis Growth Funnel V1",
+          "key": "THE_FA_FREE_ANALYSIS_GROWTH_FUNNEL_V1",
+          "description": "무료진단·입력값 기반 예상규모·상담·리포트로 광고/콘텐츠 유입을 점주 Lead로 전환하는 획득 퍼널.",
+          "effectLabel": "회사 효과",
+          "effect": "무료 가치제공을 실제 도입 상담으로 연결합니다.",
+          "status": "IN_DEVELOPMENT"
+        }
+      ]
+    },
+    {
+      "id": "sec-04",
+      "no": "04",
+      "title": "Development Platform & Services",
+      "summary": "자체 개발환경·비서·별도 서비스 제품군",
+      "countLabel": "6 assets",
+      "category": "Development Platform & Services",
+      "assets": [
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "THE FA One-Click Connection V1",
+          "key": "THE_FA_ONE_CLICK_CONNECTION_V1",
+          "description": "프로젝트·방·Core·Source·개발환경을 한 흐름으로 연결하는 개발 연결·승계 오케스트레이션 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "개발 시작과 승계 준비 절차를 줄입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "THE FA Visual Studio V1",
+          "key": "THE_FA_VISUAL_STUDIO_V1",
+          "description": "실제 사이트를 화면으로 보며 수정하고 Source·Preview와 연결하는 THE FA 자체 사이트 AI 편집기.",
+          "effectLabel": "회사 효과",
+          "effect": "비개발자도 실제 화면을 기준으로 사이트를 수정·검토할 수 있게 합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Hi THE FA Assistant V1",
+          "key": "HI_THE_FA_ASSISTANT_V1",
+          "description": "일정·할일·음성·알람·예약·실행을 하나의 인터페이스로 묶는 개인/업무 실행형 Assistant.",
+          "effectLabel": "회사 효과",
+          "effect": "개인업무와 회사업무의 실행 자동화 기반을 만듭니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "THE FA Persona Brain V1",
+          "key": "THE_FA_PERSONA_BRAIN_V1",
+          "description": "관계·말투·기억·안전보류·메신저 공통 상태를 여러 인터페이스가 공유하도록 하는 Persona 기억층.",
+          "effectLabel": "회사 효과",
+          "effect": "채널이 달라도 동일한 사용자 문맥과 관계기억을 유지합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "LIFE BLACKBOX V1",
+          "key": "LIFE_BLACKBOX_V1",
+          "description": "Android AI 앱, 서명 연속성, Secret Vault, 사용량 Guard, 배포기반을 포함한 모바일 제품 실험·출시 자산.",
+          "effectLabel": "회사 효과",
+          "effect": "모바일 독립제품을 안전하게 빌드·배포할 수 있는 기반입니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "상미 V1",
+          "key": "SANGME_V1",
+          "description": "추천·Referral·Reward·Withdrawal·Monetization을 포함하는 별도 소비자 추천 서비스.",
+          "effectLabel": "회사 효과",
+          "effect": "단골리턴 외 별도 추천·제휴 수익 실험을 가능하게 합니다.",
+          "status": "IN_DEVELOPMENT"
+        }
+      ]
+    },
+    {
+      "id": "sec-05",
+      "no": "05",
+      "title": "Dangolreturn Product",
+      "summary": "고객신호 → 매장실행 → 실제 재방문을 연결하는 Customer Return OS",
+      "countLabel": "9 assets",
+      "category": "Dangolreturn Product",
+      "assets": [
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "단골리턴 Customer OS V1",
+          "key": "DANGOLRETURN_CUSTOMER_OS_V1",
+          "description": "QR·게임·Reward·Identity·Consent·Tap·고객 Network를 묶은 고객 참여·재방문 경험 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "오프라인 고객의 참여·방문·관계 데이터를 확보합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "단골리턴 Owner OS V1",
+          "key": "DANGOLRETURN_OWNER_OS_V1",
+          "description": "오늘·고객·Action·LIVE VOC·Loyalty·TAP·운영관리·성과를 점주 한 화면에 연결하는 Store OS.",
+          "effectLabel": "회사 효과",
+          "effect": "고객 신호부터 실행과 결과까지 점주가 관리합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "단골리턴 HQ OS V1",
+          "key": "DANGOLRETURN_HQ_OS_V1",
+          "description": "프랜차이즈 본사의 Dashboard·Store360·고객/LIVE VOC·HQ Action·캠페인·SV·비교분석을 묶은 본사 운영 OS.",
+          "effectLabel": "회사 효과",
+          "effect": "다점포/프랜차이즈 Enterprise 운영 기반을 만듭니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "단골리턴 LIVE VOC & Recovery V1",
+          "key": "DANGOLRETURN_LIVE_VOC_RECOVERY_V1",
+          "description": "익명 실시간 피드백→Issue→점주 확인/처리→고객 확인으로 이어지는 고객 문제회복 흐름.",
+          "effectLabel": "회사 효과",
+          "effect": "공개 리뷰·이탈 전에 매장 내부에서 문제를 발견하고 회복합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Loyalty / TAP / Presence Network V1",
+          "key": "DANGOLRETURN_LOYALTY_TAP_PRESENCE_NETWORK_V1",
+          "description": "TAP·Presence·방문 Ledger·적립정책·고객 Network를 연결해 실제 방문증거와 단골관계를 관리하는 기반.",
+          "effectLabel": "회사 효과",
+          "effect": "디지털 반응과 실제 방문을 구분해 관계 데이터를 축적합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Verified Revisit & Action Outcome V1",
+          "key": "DANGOLRETURN_VERIFIED_REVISIT_ACTION_OUTCOME_V1",
+          "description": "Action 실행과 Outcome, 실제 검증 재방문을 연결하는 성과측정 계층.",
+          "effectLabel": "회사 효과",
+          "effect": "메시지 발송·쿠폰 사용과 실제 재방문을 분리해 성과를 측정합니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 5,
+          "difficultyLabel": "최상",
+          "name": "Messaging / Credit / Wallet / Payment V1",
+          "key": "DANGOLRETURN_MESSAGING_CREDIT_WALLET_PAYMENT_V1",
+          "description": "메시징 실행·Credit·Wallet·Payment를 연결하는 사용량 과금·수익화 기반.",
+          "effectLabel": "회사 효과",
+          "effect": "알림톡/SMS·충전·결제 기반의 반복매출 구조를 만듭니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "dev",
+          "statusLabel": "개발 중",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "Beauty Vertical V1",
+          "key": "DANGOLRETURN_BEAUTY_VERTICAL_V1",
+          "description": "미용업 사업자·디자이너·프리랜서·전문가 Scope/권한을 확장하는 업종 Vertical.",
+          "effectLabel": "회사 효과",
+          "effect": "음식점·카페 외 미용업으로 제품 적용범위를 넓힙니다.",
+          "status": "IN_DEVELOPMENT"
+        },
+        {
+          "statusClass": "reg",
+          "statusLabel": "회귀 수정",
+          "difficultyLevel": 4,
+          "difficultyLabel": "높음",
+          "name": "점주 카카오 로그인",
+          "key": "DANGOLRETURN_OWNER_KAKAO_LOGIN",
+          "description": "점주 카카오 소셜 로그인과 기존 고객 계정 연결 기능.",
+          "effectLabel": "회사 효과",
+          "effect": "Google·Naver와 함께 가입·로그인 선택지를 완성합니다.",
+          "status": "REGRESSION_OPEN"
+        }
+      ]
+    }
+  ],
+  "candidates": {
+    "title": "Recovered / R&D Candidates",
+    "lead": "공식 Registry와 분리된 회수·연구 자산입니다. 구현 흔적 또는 기획 근거는 있으나, 공식 상태로 과장하지 않고 검증대기/연구로 구분합니다.",
+    "items": [
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "THE FA AI Builder",
+        "key": "THE_FA_AI_BUILDER_V1",
+        "description": "자연어 요구를 기반으로 웹사이트·서비스 생성/수정을 지원하는 개발엔진 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "THE FA AI Council",
+        "key": "THE_FA_AI_COUNCIL_V1",
+        "description": "복수 분석 엔진이 같은 안건을 독립 검토하고 비교·종합하는 의사결정 기술 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "CEO AI Secretary",
+        "key": "THE_FA_CEO_AI_SECRETARY_V1",
+        "description": "회사현황·일정·브리핑·업무지휘를 연결하는 대표 전용 Assistant 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 4,
+        "difficultyLabel": "높음",
+        "name": "Marketing Collector",
+        "key": "THE_FA_MARKETING_COLLECTOR_V1",
+        "description": "기업/HQ Lead·홈페이지·이메일·전화·문의폼을 수집·검증·중복제거하는 영업 데이터 수집기 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 4,
+        "difficultyLabel": "높음",
+        "name": "Email & Reply Automation",
+        "key": "THE_FA_EMAIL_REPLY_AUTOMATION_V1",
+        "description": "문의·영업회신을 분류하고 승인형 답장·후속접촉을 생성하는 이메일 운영 자동화 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 4,
+        "difficultyLabel": "높음",
+        "name": "Instagram Connector & Growth",
+        "key": "THE_FA_INSTAGRAM_CONNECTOR_GROWTH_AI_V1",
+        "description": "콘텐츠 제작·채널 연동·성과 피드백을 연결하는 소셜 성장기술 후보."
+      },
+      {
+        "statusClass": "recovered",
+        "statusLabel": "회수/검증대기",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "External Data Connectors",
+        "key": "THE_FA_EXTERNAL_DATA_CONNECTORS_V1",
+        "description": "공공데이터·지도/리뷰·메시징·결제 등 외부 시스템을 공통 계약으로 연결하는 Connector 계층 후보."
+      },
+      {
+        "statusClass": "research",
+        "statusLabel": "연구",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "Store Intelligence Platform",
+        "key": "THE_FA_STORE_INTELLIGENCE_PLATFORM_V1",
+        "description": "매장 신호·실행·결과를 결합해 운영상태와 다음 실행을 설명하는 Store Intelligence 연구자산."
+      },
+      {
+        "statusClass": "research",
+        "statusLabel": "연구",
+        "difficultyLevel": 5,
+        "difficultyLabel": "최상",
+        "name": "FA Score Research",
+        "key": "THE_FA_FA_SCORE_RESEARCH_V1",
+        "description": "장기 운영행동·실행·성과 데이터를 활용한 사업자 대안신용 연구자산."
+      },
+      {
+        "statusClass": "research",
+        "statusLabel": "연구/보호",
+        "difficultyLevel": 4,
+        "difficultyLabel": "높음",
+        "name": "IP / Patent Portfolio",
+        "key": "THE_FA_IP_PORTFOLIO_V1",
+        "description": "출원기술과 후속 발명후보를 제품개발과 연결해 관리하는 지식재산 포트폴리오."
+      }
+    ],
+    "moreSummary": "기타 회수 후보 Asset Key 보기 — 세부 기능 정의 검증 전",
+    "moreKeys": [
+      "THE_FA_AI_GENERATION_METADATA_V1",
+      "THE_FA_CANONICAL_BRAND_ASSET_REGISTRY_CURRENT",
+      "THE_FA_CEO_CORE_FAST_RESUME_DELTA_V1",
+      "THE_FA_CEO_DECISION_LEDGER_CURRENT",
+      "THE_FA_CUSTOMER_KAKAO_ENROLLMENT_V1",
+      "THE_FA_CUSTOMER_KAKAO_LINK_V1",
+      "THE_FA_CUSTOMER_KAKAO_RECOVERY_V1",
+      "THE_FA_CUSTOMER_QR_V1",
+      "THE_FA_EVIDENCE_SEMANTICS_V1",
+      "THE_FA_FREE_ANALYSIS_PHONE_V1",
+      "THE_FA_GUARDED_ACTION_BROKER_V1",
+      "THE_FA_HQ_PREVIEW_OUT",
+      "THE_FA_MANUAL_FRANCHISE_HQ_APPROVAL",
+      "THE_FA_QA_OWNER_AUTH",
+      "THE_FA_REPRESENTATIVE_DECISION_AND_CANONICAL_ASSET_LEDGER_CURRENT",
+      "THE_FA_TAP_V2",
+      "THE_FA_UNIVERSAL_AI_CONTEXT_V1",
+      "THE_FA_UNIVERSAL_AUTHORITATIVE_SOURCE_ROUTER",
+      "THE_FA_WORKFLOW_METADATA_V1"
+    ]
+  },
+  "services": {
+    "id": "services",
+    "title": "Services & Domains",
+    "note": "운영 연결 / Review / Staging / 도메인 설계를 분리 표시",
+    "columns": [
+      "서비스",
+      "URL",
+      "상태",
+      "용도 / 확인사항"
+    ],
+    "rows": [
+      {
+        "name": "THE FA 공식 홈페이지",
+        "url": "https://thefa.kr",
+        "urlLabel": "thefa.kr",
+        "urlMark": "↗",
+        "status": "공식 대표 도메인",
+        "note": "대표님 확정 공식 홈페이지"
+      },
+      {
+        "name": "THE FA / 단골리턴 공개 사이트",
+        "url": "https://thefa.co.kr",
+        "urlLabel": "thefa.co.kr",
+        "urlMark": "↗",
+        "status": "운영 연결",
+        "note": "통합 제품 Runtime에 연결된 공개 도메인"
+      },
+      {
+        "name": "THE FA WWW Alias",
+        "url": "https://www.thefa.co.kr",
+        "urlLabel": "www.thefa.co.kr",
+        "urlMark": "↗",
+        "status": "운영 연결",
+        "note": "thefa.co.kr WWW 별칭"
+      },
+      {
+        "name": "단골리턴 서비스",
+        "url": "https://dangol.thefa.co.kr",
+        "urlLabel": "dangol.thefa.co.kr",
+        "urlMark": "↗",
+        "status": "운영 도메인 연결",
+        "note": "통합 제품 Runtime에 연결된 단골리턴 도메인"
+      },
+      {
+        "name": "상미",
+        "url": "https://sangme.thefa.co.kr",
+        "urlLabel": "sangme.thefa.co.kr",
+        "urlMark": "↗",
+        "status": "배포 연결",
+        "note": "상미 별도 서비스에 연결된 전용 도메인"
+      },
+      {
+        "name": "THE FA Visual Studio",
+        "url": null,
+        "urlLabel": "내부 전용",
+        "urlMark": null,
+        "status": "배포 READY",
+        "note": "Visual Studio 전용 배포 환경"
+      },
+      {
+        "name": "Visual Studio Custom Route",
+        "url": "https://vs.thefa.co.kr",
+        "urlLabel": "vs.thefa.co.kr",
+        "urlMark": "↗",
+        "status": "구성 확인",
+        "note": "GitHub routing 설정상 Cloudflare Worker로 연결되도록 구성"
+      },
+      {
+        "name": "Customer QR Public Review",
+        "url": null,
+        "urlLabel": "내부 전용",
+        "urlMark": null,
+        "status": "Review",
+        "note": "고객 QR 공개 검토용 배포"
+      },
+      {
+        "name": "Staging Runtime",
+        "url": null,
+        "urlLabel": "내부 전용",
+        "urlMark": null,
+        "status": "Staging",
+        "note": "THE FA 통합제품 Staging Runtime"
+      },
+      {
+        "name": "정부지원사업 RD",
+        "url": "https://rd.thefa.co.kr",
+        "urlLabel": "rd.thefa.co.kr",
+        "urlMark": "↗",
+        "status": "도메인 설계",
+        "note": "제품계획에 정의된 도메인. 현재 공개 Live로 확인하지 않음"
+      }
+    ]
+  },
+  "infra": {
+    "id": "infra",
+    "title": "Server & Infrastructure",
+    "note": "Secret·Project ID·프로젝트명·Credential은 의도적으로 제외",
+    "columns": [
+      "인프라",
+      "역할",
+      "기술",
+      "담당 범위"
+    ],
+    "rows": [
+      [
+        "Vercel — 통합 제품 Runtime",
+        "통합 제품 웹 Runtime",
+        "Next.js · Node 24.x",
+        "thefa.co.kr · www.thefa.co.kr · dangol.thefa.co.kr · Staging"
+      ],
+      [
+        "Vercel — Visual Studio",
+        "Visual Studio 편집기 Runtime",
+        "Production target READY",
+        "전용 편집기 배포/검증 Runtime"
+      ],
+      [
+        "Vercel — SANGME",
+        "상미 서비스 Runtime",
+        "Production deployment READY",
+        "sangme.thefa.co.kr custom domain 연결"
+      ],
+      [
+        "Vercel — Government RD",
+        "정부지원사업 RD 개발 Runtime",
+        "Next.js · Node 24.x",
+        "개발 프로젝트. 현재 공개 Live 상태로 보지 않음"
+      ],
+      [
+        "Supabase",
+        "DB · Auth · RPC · Queue/Data Plane",
+        "PostgreSQL / PLpgSQL",
+        "단골리턴·Core·Control Tower·Company Memory·RD 데이터 계층"
+      ],
+      [
+        "Cloudflare Workers",
+        "Visual Studio Edge Route",
+        "Worker / Rewrite",
+        "vs.thefa.co.kr 라우팅 구성"
+      ],
+      [
+        "Google Cloud",
+        "Central QA / Build / Fallback",
+        "Cloud Run · Build · QA",
+        "exact-head 검증·중앙 QA·fallback 경로"
+      ],
+      [
+        "GitHub",
+        "통합 제품 소스 저장소 (비공개)",
+        "Source Authority",
+        "주요 제품·Core·Control Tower·자동화 코드"
+      ],
+      [
+        "GitHub",
+        "상미 서비스 소스 저장소 (비공개)",
+        "Separate Service Repo",
+        "상미 별도 서비스 코드"
+      ],
+      [
+        "Representative QA PC",
+        "Windows QA/Build Node",
+        "Local exact-head runner",
+        "중앙 PC QA Worker·로컬 검색·검증 수행"
+      ]
+    ]
+  },
+  "tools": {
+    "id": "tools",
+    "title": "Development Toolchain",
+    "note": "외부 생성형 AI 제품명은 제외하고 실제 개발·QA·배포 도구만 표기",
+    "items": [
+      {
+        "name": "Git / GitHub",
+        "description": "버전관리·branch·Issue·PR·Fresh HEAD 기준"
+      },
+      {
+        "name": "Node.js / npm / npx",
+        "description": "웹 런타임·패키지·빌드 실행"
+      },
+      {
+        "name": "Next.js / TypeScript",
+        "description": "주요 웹 제품·내부 운영도구 프레임워크"
+      },
+      {
+        "name": "PostgreSQL / PLpgSQL",
+        "description": "Core·제품·자동화의 상태머신·RPC·데이터 계약"
+      },
+      {
+        "name": "Supabase CLI",
+        "description": "Staging migration·DB 개발·검증"
+      },
+      {
+        "name": "Vercel Runtime / CLI",
+        "description": "Preview·Staging·Production 배포 검증"
+      },
+      {
+        "name": "Google Cloud SDK",
+        "description": "Cloud Run·Build·중앙 QA 운영"
+      },
+      {
+        "name": "PowerShell",
+        "description": "Windows 자동화·QA Worker·로컬 운영 스크립트"
+      },
+      {
+        "name": "Python",
+        "description": "QA·복구·색인·자동화 보조도구"
+      },
+      {
+        "name": "Everything",
+        "description": "로컬 파일 경로 초고속 색인"
+      },
+      {
+        "name": "ripgrep",
+        "description": "대규모 코드/텍스트 내용검색"
+      }
+    ]
+  },
+  "governance": {
+    "title": "Asset Governance",
+    "lead": "새 개발품은 코드가 생겼다는 이유만으로 공식 자산이 되지 않습니다.",
+    "steps": [
+      "기존 Canonical Asset / Alias 중복 확인",
+      "신규라면 Candidate Ledger에 등록",
+      "Fresh Source · Workstream · Owner 연결",
+      "개발 완료 후 exact-head QA 증거 연결",
+      "Runtime / Production 증거를 단계별 검증",
+      "Promotion Gate 통과 시 공식 Registry 승격",
+      "다른 개발방은 공식 자산을 우선 재사용"
+    ]
+  },
+  "footer": [
+    "© 2026 THE FA · Technology & Development Asset Portfolio",
+    "Basis: THE FA Core Asset Registry · Fresh GitHub · Runtime/QA Evidence · Connected deployment configuration · 외부 공유용 일부 내부 식별자는 중립 표기로 정규화"
+  ]
+}

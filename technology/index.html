@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<meta name="robots" content="index,follow"/>
+<link rel="canonical" href="https://thefa.kr/technology/"/>
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="THE FA"/>
+<meta property="og:locale" content="ko_KR"/>
+<meta property="og:url" content="https://thefa.kr/technology/"/>
+<meta property="og:image" content="https://thefa.kr/assets/brand/og-thefa.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="description" content="THE FA 기술·개발자산, 서비스 도메인, 인프라 및 개발도구 통합 포트폴리오"/>
+<meta property="og:title" content="Technology &amp; Development Asset Portfolio — THE FA"/>
+<meta property="og:description" content="THE FA 기술·개발자산, 서비스 도메인, 인프라 및 개발도구 통합 포트폴리오"/>
+<title>Technology &amp; Development Asset Portfolio — THE FA</title>
+<link rel="stylesheet" href="../styles.css?v=5"/>
+<link rel="stylesheet" href="portfolio.css?v=1"/>
+<link rel="icon" href="../assets/approved/thefa-logo.png"/>
+</head>
+<body>
+
+<a class="skip" href="#main">본문 바로가기</a>
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <nav class="nav" aria-label="주 메뉴">
+      <a class="brand" href="../index.html" aria-label="THE FA 홈">
+        <img src="../assets/approved/thefa-logo.png" alt="THE FA" width="96"/>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html#patents">기술 자산</a></li>
+        <li><a href="../index.html#research">R&amp;D</a></li>
+        <li><a href="./" aria-current="page">기술·개발</a></li>
+        <li><a href="../index.html#products">제품</a></li>
+        <li><a href="../index.html#roadmap">개발 단계</a></li>
+        <li><a href="../index.html#company">회사</a></li>
+      </ul>
+      <a class="nav-cta" href="../contact.html">협력 문의</a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-panel" aria-label="메뉴 열기"><span></span><span></span><span></span></button>
+    </nav>
+  </div>
+  <div class="nav-panel" id="nav-panel" style="display:none">
+    <ul>
+      <li><a href="../index.html#patents">기술 자산</a></li>
+      <li><a href="../index.html#research">R&amp;D</a></li>
+      <li><a href="./" aria-current="page">기술·개발</a></li>
+      <li><a href="../index.html#products">제품</a></li>
+      <li><a href="../index.html#roadmap">개발 단계</a></li>
+      <li><a href="../index.html#company">회사</a></li>
+      <li><a href="../contact.html" data-cta>협력 문의</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main" class="tech-portfolio">
+<!-- 아래 영역은 technology/portfolio.json 에서 생성됩니다. 직접 수정하지 말고 JSON 수정 후 `node scripts/build-technology.mjs` 실행 -->
+<!-- TECH-PORTFOLIO:START -->
+<div class="tp-bar">
+  <div class="tp-wrap tp-bar-in">
+    <nav class="tp-nav" aria-label="기술·개발자산 목차"><a href="#sec-01">Core</a><a href="#sec-02">Asset &amp; QA</a><a href="#sec-03">Business</a><a href="#sec-04">Platform</a><a href="#sec-05">단골리턴</a><a href="#services">서비스/도메인</a><a href="#infra">인프라</a><a href="#tools">개발도구</a></nav>
+  </div>
+</div>
+
+<div class="tp-wrap" id="top">
+<section class="tp-hero">
+  <div class="tp-hero-grid">
+    <div class="tp-hero-main">
+      <div class="tp-kicker">Technology &amp; Development Asset Portfolio · 2026.09.17</div>
+      <h1>기능이 아니라<br/>회사 기술자산으로 관리합니다.</h1>
+      <p>THE FA가 실제로 개발했거나 공식 개발 중인 제품·플랫폼·내부 인프라를 Canonical Asset 기준으로 정리했습니다. 브랜치·버전·임시명은 중복 집계하지 않으며, 검증 상태와 실제 기능을 분리해 표시합니다.</p>
+      <div class="tp-hero-note"><span>공식 Registry 45</span><span>Runtime 검증 7</span><span>QA 검증 8</span><span>개발 중 26</span><span>회귀 수정 1</span><span>개발 예정 3</span></div>
+    </div>
+    <aside class="tp-hero-side">
+      <div class="tp-metrics"><div class="tp-metric"><strong>45</strong><span>공식 개발자산</span></div><div class="tp-metric"><strong>15</strong><span>QA 이상 검증자산</span></div><div class="tp-metric"><strong>5</strong><span>핵심 제품·플랫폼 축</span></div><div class="tp-metric"><strong>10+</strong><span>회수·연구 대표후보</span></div></div>
+      <div class="tp-source-note">난이도는 상대평가입니다. 데이터·보안·동시성·외부연동·상태머신·QA 범위를 함께 고려했습니다.</div>
+    </aside>
+  </div>
+</section>
+
+<div class="tp-toolbar">
+  <input class="tp-search" id="assetSearch" type="search" placeholder="개발품명·기능·Asset Key 검색" aria-label="개발품명·기능·Asset Key 검색"/>
+  <div class="tp-filters"><button type="button" class="active" aria-pressed="true" data-filter="ALL">전체</button><button type="button" aria-pressed="false" data-filter="RUNTIME_VERIFIED">운영 검증</button><button type="button" aria-pressed="false" data-filter="QA_VERIFIED">QA 검증</button><button type="button" aria-pressed="false" data-filter="IN_DEVELOPMENT">개발 중</button><button type="button" aria-pressed="false" data-filter="REGRESSION_OPEN">회귀 수정</button><button type="button" aria-pressed="false" data-filter="PROPOSED">예정</button></div>
+</div>
+
+<section class="tp-asset-section" id="sec-01" aria-labelledby="sec-01-title">
+  <div class="tp-section-heading">
+    <div><span class="tp-section-no">01</span><h2 id="sec-01-title">Company Core &amp; Continuity</h2></div>
+    <p>회사기억·승계·문맥·변경안전을 담당하는 내부 기술 기반</p>
+    <span class="tp-count">12 assets</span>
+  </div>
+  <div class="tp-asset-grid">
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Company Core &amp; Continuity" data-search="associative memory engine v1 the_fa_associative_memory_engine_v1 정확 검색·전문 검색·주제·관계 그래프를 결합해, 모호한 과거 기억에서도 관련 업무와 증거를 회수하는 연상형 기억 엔진. 방 교체와 장기 프로젝트에서 과거 개발·결정·근거를 빠르게 복원합니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Associative Memory Engine V1</h3>
+        <p class="tp-asset-key">THE_FA_ASSOCIATIVE_MEMORY_ENGINE_V1</p>
+        <p class="tp-desc">정확 검색·전문 검색·주제·관계 그래프를 결합해, 모호한 과거 기억에서도 관련 업무와 증거를 회수하는 연상형 기억 엔진.</p>
+        <div class="tp-effect"><span>회사 효과</span>방 교체와 장기 프로젝트에서 과거 개발·결정·근거를 빠르게 복원합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Company Core &amp; Continuity" data-search="chat archive index v1 the_fa_chat_archive_index_v1 대규모 대화 아카이브를 원본 해시·대화/메시지 출처와 함께 색인해 밀리초 단위 검색을 지원하는 로컬 인덱스. 과거 대화를 매번 다시 읽지 않고 필요한 증거만 빠르게 찾습니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Chat Archive Index V1</h3>
+        <p class="tp-asset-key">THE_FA_CHAT_ARCHIVE_INDEX_V1</p>
+        <p class="tp-desc">대규모 대화 아카이브를 원본 해시·대화/메시지 출처와 함께 색인해 밀리초 단위 검색을 지원하는 로컬 인덱스.</p>
+        <div class="tp-effect"><span>회사 효과</span>과거 대화를 매번 다시 읽지 않고 필요한 증거만 빠르게 찾습니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Company Core &amp; Continuity" data-search="conversation archive backfill v1 the_fa_conversation_archive_backfill_v1 과거 전체 대화 export를 무결성 검증하고 방·프로젝트에 매핑한 뒤 company memory history로 안전하게 복구하는 파이프라인. 과거 개발흔적과 대표 결정을 장기 회사기억으로 복구합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Conversation Archive Backfill V1</h3>
+        <p class="tp-asset-key">THE_FA_CONVERSATION_ARCHIVE_BACKFILL_V1</p>
+        <p class="tp-desc">과거 전체 대화 Export를 무결성 검증하고 방·프로젝트에 매핑한 뒤 Company Memory HISTORY로 안전하게 복구하는 파이프라인.</p>
+        <div class="tp-effect"><span>회사 효과</span>과거 개발흔적과 대표 결정을 장기 회사기억으로 복구합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Company Core &amp; Continuity" data-search="capture retry outbox v1 company_memory_capture_retry_outbox_v1 기억 저장 실패가 대화를 막지 않도록 재시도·지수 백오프·stale claim 복구·dead-letter를 처리하는 비동기 저장 복구 계층. 회사기억 저장 장애와 사용자 응답을 분리해 운영 안정성을 높입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Capture Retry Outbox V1</h3>
+        <p class="tp-asset-key">COMPANY_MEMORY_CAPTURE_RETRY_OUTBOX_V1</p>
+        <p class="tp-desc">기억 저장 실패가 대화를 막지 않도록 재시도·지수 백오프·stale claim 복구·dead-letter를 처리하는 비동기 저장 복구 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>회사기억 저장 장애와 사용자 응답을 분리해 운영 안정성을 높입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Company Core &amp; Continuity" data-search="fast succession one-call boot v1 the_fa_fast_succession_one_call_boot_v1 전체 history를 다시 재생하지 않고 core 1회 조회로 새 방이 현재 업무를 빠르게 이어받도록 하는 승계 부팅 계층. 대화방 교체 시 재탐색·대기시간을 크게 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Fast Succession One-Call Boot V1</h3>
+        <p class="tp-asset-key">THE_FA_FAST_SUCCESSION_ONE_CALL_BOOT_V1</p>
+        <p class="tp-desc">전체 History를 다시 재생하지 않고 Core 1회 조회로 새 방이 현재 업무를 빠르게 이어받도록 하는 승계 부팅 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>대화방 교체 시 재탐색·대기시간을 크게 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Company Core &amp; Continuity" data-search="fast succession p0 v1 fast_succession_p0_v1 fast boot와 strict completion을 분리하고 exact-head qa 재사용, 승계 전용 canary, 중단 후 resume를 통합한 실전 승계 고도화. 승계가 일반개발로 잘못 넘어가거나 검증이 빠지는 문제를 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>FAST Succession P0 V1</h3>
+        <p class="tp-asset-key">FAST_SUCCESSION_P0_V1</p>
+        <p class="tp-desc">Fast Boot와 strict completion을 분리하고 exact-head QA 재사용, 승계 전용 canary, 중단 후 resume를 통합한 실전 승계 고도화.</p>
+        <div class="tp-effect"><span>회사 효과</span>승계가 일반개발로 잘못 넘어가거나 검증이 빠지는 문제를 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Company Core &amp; Continuity" data-search="strict succession local writer compatibility v1 strict_succession_local_writer_compat_v1 단일 writer lease·fencing identity를 유지하면서 로컬 개발 실행과 strict succession이 충돌하지 않도록 하는 호환 계층. 여러 실행환경이 있어도 실제 코드 writer를 하나로 유지합니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Strict Succession Local Writer Compatibility V1</h3>
+        <p class="tp-asset-key">STRICT_SUCCESSION_LOCAL_WRITER_COMPAT_V1</p>
+        <p class="tp-desc">단일 writer lease·fencing identity를 유지하면서 로컬 개발 실행과 strict succession이 충돌하지 않도록 하는 호환 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>여러 실행환경이 있어도 실제 코드 writer를 하나로 유지합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Company Core &amp; Continuity" data-search="zero-handoff continuity fabric v1 zero_handoff_continuity_fabric_v1 client attachment·bounded context compiler·steer queue·resume를 결합해 새 세션이 현재 workstream 문맥에 즉시 붙도록 하는 연속성 패브릭. 수동 승계 부담을 줄이고 장기개발의 문맥 단절을 최소화합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Zero-Handoff Continuity Fabric V1</h3>
+        <p class="tp-asset-key">ZERO_HANDOFF_CONTINUITY_FABRIC_V1</p>
+        <p class="tp-desc">Client Attachment·bounded context compiler·steer queue·resume를 결합해 새 세션이 현재 workstream 문맥에 즉시 붙도록 하는 연속성 패브릭.</p>
+        <div class="tp-effect"><span>회사 효과</span>수동 승계 부담을 줄이고 장기개발의 문맥 단절을 최소화합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Company Core &amp; Continuity" data-search="delta context router v1 delta_context_router_v1 전체 원문 대신 구조화된 변경점만 전달해 필요한 시스템에 최소 문맥을 공급하는 컨텍스트 라우터. 전사 문맥 전송량을 줄이고 오래된 상태 사용을 방지합니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Delta Context Router V1</h3>
+        <p class="tp-asset-key">DELTA_CONTEXT_ROUTER_V1</p>
+        <p class="tp-desc">전체 원문 대신 구조화된 변경점만 전달해 필요한 시스템에 최소 문맥을 공급하는 컨텍스트 라우터.</p>
+        <div class="tp-effect"><span>회사 효과</span>전사 문맥 전송량을 줄이고 오래된 상태 사용을 방지합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Company Core &amp; Continuity" data-search="global directive + work unit boundary p0 global_directive_identity_workunit_p0_v1 전사 공지·명령의 대상·revision·delta·ack와 한 번의 작업단위 경계를 canonical project/room 기준으로 관리하는 제어계층. 전사명령 누락·중복 ack·프로젝트 혼선을 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Global Directive + Work Unit Boundary P0</h3>
+        <p class="tp-asset-key">GLOBAL_DIRECTIVE_IDENTITY_WORKUNIT_P0_V1</p>
+        <p class="tp-desc">전사 공지·명령의 대상·revision·delta·ACK와 한 번의 작업단위 경계를 canonical project/room 기준으로 관리하는 제어계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>전사명령 누락·중복 ACK·프로젝트 혼선을 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Company Core &amp; Continuity" data-search="multi-system disagreement ledger v1 multi_ai_disagreement_ledger_v1 자료 불일치와 판단 불일치를 분리 기록하고, 고위험 충돌은 대표 결정이 필요하도록 올리는 판단 불일치 원장. 여러 분석 시스템의 합의만으로 권한이나 current가 바뀌는 것을 막습니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Multi-System Disagreement Ledger V1</h3>
+        <p class="tp-asset-key">MULTI_AI_DISAGREEMENT_LEDGER_V1</p>
+        <p class="tp-desc">자료 불일치와 판단 불일치를 분리 기록하고, 고위험 충돌은 대표 결정이 필요하도록 올리는 판단 불일치 원장.</p>
+        <div class="tp-effect"><span>회사 효과</span>여러 분석 시스템의 합의만으로 권한이나 CURRENT가 바뀌는 것을 막습니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Company Core &amp; Continuity" data-search="mutation fence guard v2 mutation_fence_guard_v2 쓰기 직전에 current·writer·fence·소유경로·fresh head·idempotency를 검증하는 변경 안전 게이트. 동시개발·오래된 writer·중복 실행이 코드를 덮는 사고를 차단합니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Mutation Fence Guard V2</h3>
+        <p class="tp-asset-key">MUTATION_FENCE_GUARD_V2</p>
+        <p class="tp-desc">쓰기 직전에 CURRENT·writer·fence·소유경로·Fresh HEAD·idempotency를 검증하는 변경 안전 게이트.</p>
+        <div class="tp-effect"><span>회사 효과</span>동시개발·오래된 writer·중복 실행이 코드를 덮는 사고를 차단합니다.</div>
+      </article>
+  </div>
+</section>
+
+<section class="tp-asset-section" id="sec-02" aria-labelledby="sec-02-title">
+  <div class="tp-section-heading">
+    <div><span class="tp-section-no">02</span><h2 id="sec-02-title">Asset &amp; Quality Infrastructure</h2></div>
+    <p>개발자산을 발견·검증·분류·재사용하고 품질증거를 관리</p>
+    <span class="tp-count">12 assets</span>
+  </div>
+  <div class="tp-asset-grid">
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="development asset registry v1 the_fa_development_asset_registry_v1 서비스·기능·도구·자동화·연동을 제안부터 개발·검증·회귀·폐기까지 중앙 상태로 관리하는 공식 자산원장. 개발품이 방 교체 과정에서 사라지지 않고 회사 자산으로 누적됩니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Development Asset Registry V1</h3>
+        <p class="tp-asset-key">THE_FA_DEVELOPMENT_ASSET_REGISTRY_V1</p>
+        <p class="tp-desc">서비스·기능·도구·자동화·연동을 제안부터 개발·검증·회귀·폐기까지 중앙 상태로 관리하는 공식 자산원장.</p>
+        <div class="tp-effect"><span>회사 효과</span>개발품이 방 교체 과정에서 사라지지 않고 회사 자산으로 누적됩니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="development asset candidate ledger v1 the_fa_development_asset_candidate_ledger_v1 검색·코드·기억에서 발견된 흔적을 공식자산과 분리해 검증 전 후보로 안전하게 보관하는 원장. 환경변수·옛 코드·검색 노이즈가 공식자산으로 잘못 승격되는 것을 방지합니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Development Asset Candidate Ledger V1</h3>
+        <p class="tp-asset-key">THE_FA_DEVELOPMENT_ASSET_CANDIDATE_LEDGER_V1</p>
+        <p class="tp-desc">검색·코드·기억에서 발견된 흔적을 공식자산과 분리해 검증 전 후보로 안전하게 보관하는 원장.</p>
+        <div class="tp-effect"><span>회사 효과</span>환경변수·옛 코드·검색 노이즈가 공식자산으로 잘못 승격되는 것을 방지합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Asset &amp; Quality Infrastructure" data-search="master development asset map v1 the_fa_master_development_asset_map_v1 공식자산·회수 구현·후보·별칭·증거를 branch/version 중복 없이 canonical asset 기준으로 연결하는 회사 전체 자산지도. 전사 기술 포트폴리오를 한 기준으로 추적합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Master Development Asset Map V1</h3>
+        <p class="tp-asset-key">THE_FA_MASTER_DEVELOPMENT_ASSET_MAP_V1</p>
+        <p class="tp-desc">공식자산·회수 구현·후보·별칭·증거를 branch/version 중복 없이 canonical asset 기준으로 연결하는 회사 전체 자산지도.</p>
+        <div class="tp-effect"><span>회사 효과</span>전사 기술 포트폴리오를 한 기준으로 추적합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Asset &amp; Quality Infrastructure" data-search="master development asset classification v1 the_fa_master_development_asset_classification_v1 회사 개발자산을 완료·개발중·회귀·예정·회수·재검증·연구 상태로 정규 분류하는 기준표. 대표와 개발방이 같은 상태 언어로 자산을 봅니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 중간"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><b>중간</b></span></div>
+        <h3>Master Development Asset Classification V1</h3>
+        <p class="tp-asset-key">THE_FA_MASTER_DEVELOPMENT_ASSET_CLASSIFICATION_V1</p>
+        <p class="tp-desc">회사 개발자산을 완료·개발중·회귀·예정·회수·재검증·연구 상태로 정규 분류하는 기준표.</p>
+        <div class="tp-effect"><span>회사 효과</span>대표와 개발방이 같은 상태 언어로 자산을 봅니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="asset alias resolver v1 the_fa_asset_alias_resolver_v1 옛 이름·새 이름·사용자 표현·모듈명을 deterministic canonical asset으로 해석하고 충돌은 fail-closed 하는 중앙 별칭 해석기. 동일기술 중복집계·중복개발·승계 누락을 방지합니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Asset Alias Resolver V1</h3>
+        <p class="tp-asset-key">THE_FA_ASSET_ALIAS_RESOLVER_V1</p>
+        <p class="tp-desc">옛 이름·새 이름·사용자 표현·모듈명을 deterministic canonical asset으로 해석하고 충돌은 fail-closed 하는 중앙 별칭 해석기.</p>
+        <div class="tp-effect"><span>회사 효과</span>동일기술 중복집계·중복개발·승계 누락을 방지합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="asset promotion gate v1 the_fa_asset_promotion_gate_v1 후보를 alias 중복·fresh github·exact-head qa·runtime 증거로 검증한 뒤에만 공식 registry로 승격하는 fail-closed 게이트. 검증되지 않은 흔적이 공식 기술자산으로 과장되는 일을 구조적으로 막습니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Asset Promotion Gate V1</h3>
+        <p class="tp-asset-key">THE_FA_ASSET_PROMOTION_GATE_V1</p>
+        <p class="tp-desc">후보를 Alias 중복·Fresh GitHub·exact-head QA·Runtime 증거로 검증한 뒤에만 공식 Registry로 승격하는 fail-closed 게이트.</p>
+        <div class="tp-effect"><span>회사 효과</span>검증되지 않은 흔적이 공식 기술자산으로 과장되는 일을 구조적으로 막습니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="QA_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="portfolio recovery audit v1 the_fa_portfolio_recovery_audit_v1 로컬 파일색인·코드검색·git·company memory를 결합해 과거 개발품 후보를 전수 복구하는 감사 체계. 이미 만든 기능과 도구의 누락을 중앙 원장으로 회수합니다.">
+        <div class="tp-asset-top"><span class="tp-status qa">QA 검증</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Portfolio Recovery Audit V1</h3>
+        <p class="tp-asset-key">THE_FA_PORTFOLIO_RECOVERY_AUDIT_V1</p>
+        <p class="tp-desc">로컬 파일색인·코드검색·Git·Company Memory를 결합해 과거 개발품 후보를 전수 복구하는 감사 체계.</p>
+        <div class="tp-effect"><span>회사 효과</span>이미 만든 기능과 도구의 누락을 중앙 원장으로 회수합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="central pc qa worker google v2 the_fa_qa_pc_worker_google_v2 exact-head 중앙 pc qa와 google fallback을 동일 계약으로 실행하고 검증 영수증을 남기는 공용 품질검증 worker. 모든 개발방이 같은 qa 기준과 증거를 재사용합니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Central PC QA Worker Google V2</h3>
+        <p class="tp-asset-key">THE_FA_QA_PC_WORKER_GOOGLE_V2</p>
+        <p class="tp-desc">exact-head 중앙 PC QA와 Google fallback을 동일 계약으로 실행하고 검증 영수증을 남기는 공용 품질검증 Worker.</p>
+        <div class="tp-effect"><span>회사 효과</span>모든 개발방이 같은 QA 기준과 증거를 재사용합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="RUNTIME_VERIFIED" data-category="Asset &amp; Quality Infrastructure" data-search="local fast search v1 the_fa_local_fast_search_v1 everything 경로색인과 ripgrep 내용검색을 결합해 로컬 git·파일·코드를 빠르게 찾는 개발 탐색기. 승계·복구·코드탐색 시간을 단축합니다.">
+        <div class="tp-asset-top"><span class="tp-status runtime">운영 검증</span><span class="tp-difficulty" aria-label="난이도 중간"><i class="on"></i><i class="on"></i><i class="on"></i><i></i><i></i><b>중간</b></span></div>
+        <h3>Local Fast Search V1</h3>
+        <p class="tp-asset-key">THE_FA_LOCAL_FAST_SEARCH_V1</p>
+        <p class="tp-desc">Everything 경로색인과 ripgrep 내용검색을 결합해 로컬 Git·파일·코드를 빠르게 찾는 개발 탐색기.</p>
+        <div class="tp-effect"><span>회사 효과</span>승계·복구·코드탐색 시간을 단축합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="PROPOSED" data-category="Asset &amp; Quality Infrastructure" data-search="global directive receipt guard v1 the_fa_global_directive_receipt_guard_v1 core 등록 영수증 없이는 전사 공지·명령 완료로 보고하지 못하게 하는 보호장치. 말로만 공지가 완료되고 실제 중앙 기록이 빠지는 사고를 막습니다.">
+        <div class="tp-asset-top"><span class="tp-status prop">개발 예정</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Global Directive Receipt Guard V1</h3>
+        <p class="tp-asset-key">THE_FA_GLOBAL_DIRECTIVE_RECEIPT_GUARD_V1</p>
+        <p class="tp-desc">Core 등록 영수증 없이는 전사 공지·명령 완료로 보고하지 못하게 하는 보호장치.</p>
+        <div class="tp-effect"><span>회사 효과</span>말로만 공지가 완료되고 실제 중앙 기록이 빠지는 사고를 막습니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="PROPOSED" data-category="Asset &amp; Quality Infrastructure" data-search="change subscriptions v1 mcp_change_subscriptions_v1 current·writer·qa·전사명령 변화가 생기면 관련 소비자에게 refresh hint를 전달하는 변경 구독 계층. 반복 polling과 stale 상태 사용을 줄이는 것이 목표입니다.">
+        <div class="tp-asset-top"><span class="tp-status prop">개발 예정</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Change Subscriptions V1</h3>
+        <p class="tp-asset-key">MCP_CHANGE_SUBSCRIPTIONS_V1</p>
+        <p class="tp-desc">CURRENT·writer·QA·전사명령 변화가 생기면 관련 소비자에게 refresh hint를 전달하는 변경 구독 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>반복 polling과 stale 상태 사용을 줄이는 것이 목표입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="PROPOSED" data-category="Asset &amp; Quality Infrastructure" data-search="incremental asset recovery v1 the_fa_incremental_asset_recovery_v1 초기 전수복구 뒤에는 새 git diff와 company memory 이벤트만 증분 스캔해 자산상태를 갱신하는 자동 회수기. 전 pc·전 저장소를 매번 다시 훑지 않고 자산원장을 최신으로 유지하는 것이 목표입니다.">
+        <div class="tp-asset-top"><span class="tp-status prop">개발 예정</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Incremental Asset Recovery V1</h3>
+        <p class="tp-asset-key">THE_FA_INCREMENTAL_ASSET_RECOVERY_V1</p>
+        <p class="tp-desc">초기 전수복구 뒤에는 새 Git diff와 Company Memory 이벤트만 증분 스캔해 자산상태를 갱신하는 자동 회수기.</p>
+        <div class="tp-effect"><span>회사 효과</span>전 PC·전 저장소를 매번 다시 훑지 않고 자산원장을 최신으로 유지하는 것이 목표입니다.</div>
+      </article>
+  </div>
+</section>
+
+<section class="tp-asset-section" id="sec-03" aria-labelledby="sec-03-title">
+  <div class="tp-section-heading">
+    <div><span class="tp-section-no">03</span><h2 id="sec-03-title">Business Operations</h2></div>
+    <p>회사 운영·재무·정부지원·영업을 자동화하는 Business OS</p>
+    <span class="tp-count">6 assets</span>
+  </div>
+  <div class="tp-asset-grid">
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="the fa control tower v3 the_fa_control_tower_v3 회사 서비스·직원·업무·데이터·보안·재무·영업·연속성 상태를 한 곳에서 관제하는 전사 운영 허브. 대표가 회사 운영상태를 한 화면에서 파악하는 기반입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA Control Tower V3</h3>
+        <p class="tp-asset-key">THE_FA_CONTROL_TOWER_V3</p>
+        <p class="tp-desc">회사 서비스·직원·업무·데이터·보안·재무·영업·연속성 상태를 한 곳에서 관제하는 전사 운영 허브.</p>
+        <div class="tp-effect"><span>회사 효과</span>대표가 회사 운영상태를 한 화면에서 파악하는 기반입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="control tower staff &amp; access os v1 the_fa_control_tower_staff_access_os_v1 직원 초대·프로필·역할·권한·재직상태·감사기록을 중앙에서 관리하는 조직 접근제어 모듈. 조직 확장 시 권한과 책임을 안전하게 관리합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Control Tower Staff &amp; Access OS V1</h3>
+        <p class="tp-asset-key">THE_FA_CONTROL_TOWER_STAFF_ACCESS_OS_V1</p>
+        <p class="tp-desc">직원 초대·프로필·역할·권한·재직상태·감사기록을 중앙에서 관리하는 조직 접근제어 모듈.</p>
+        <div class="tp-effect"><span>회사 효과</span>조직 확장 시 권한과 책임을 안전하게 관리합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="finance &amp; accounting os v1 the_fa_finance_accounting_os_v1 은행·법인카드·pg정산·세금계산서·증빙·대사·세무사 전달을 연결하는 재무·회계 자동화 기반. 재무 운영시간과 증빙 누락 위험을 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Finance &amp; Accounting OS V1</h3>
+        <p class="tp-asset-key">THE_FA_FINANCE_ACCOUNTING_OS_V1</p>
+        <p class="tp-desc">은행·법인카드·PG정산·세금계산서·증빙·대사·세무사 전달을 연결하는 재무·회계 자동화 기반.</p>
+        <div class="tp-effect"><span>회사 효과</span>재무 운영시간과 증빙 누락 위험을 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="정부지원사업 자동화 rd v1 the_fa_government_support_automation_rd_v1 공고수집→회사자료→신청서→첨부→제출준비→결과→실패분석→재신청으로 이어지는 정부지원사업 운영 자동화. 지원사업 탐색·작성·후속관리 반복업무를 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>정부지원사업 자동화 RD V1</h3>
+        <p class="tp-asset-key">THE_FA_GOVERNMENT_SUPPORT_AUTOMATION_RD_V1</p>
+        <p class="tp-desc">공고수집→회사자료→신청서→첨부→제출준비→결과→실패분석→재신청으로 이어지는 정부지원사업 운영 자동화.</p>
+        <div class="tp-effect"><span>회사 효과</span>지원사업 탐색·작성·후속관리 반복업무를 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="sales autopilot v1 the_fa_sales_autopilot_v1 lead→검증→개인화→메일→회신→후속→미팅→pilot까지 b2b 영업흐름을 연결하는 영업자동화. 소수 인력으로 b2b 영업 처리량을 확장합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Sales Autopilot V1</h3>
+        <p class="tp-asset-key">THE_FA_SALES_AUTOPILOT_V1</p>
+        <p class="tp-desc">Lead→검증→개인화→메일→회신→후속→미팅→Pilot까지 B2B 영업흐름을 연결하는 영업자동화.</p>
+        <div class="tp-effect"><span>회사 효과</span>소수 인력으로 B2B 영업 처리량을 확장합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Business Operations" data-search="free analysis growth funnel v1 the_fa_free_analysis_growth_funnel_v1 무료진단·입력값 기반 예상규모·상담·리포트로 광고/콘텐츠 유입을 점주 lead로 전환하는 획득 퍼널. 무료 가치제공을 실제 도입 상담으로 연결합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Free Analysis Growth Funnel V1</h3>
+        <p class="tp-asset-key">THE_FA_FREE_ANALYSIS_GROWTH_FUNNEL_V1</p>
+        <p class="tp-desc">무료진단·입력값 기반 예상규모·상담·리포트로 광고/콘텐츠 유입을 점주 Lead로 전환하는 획득 퍼널.</p>
+        <div class="tp-effect"><span>회사 효과</span>무료 가치제공을 실제 도입 상담으로 연결합니다.</div>
+      </article>
+  </div>
+</section>
+
+<section class="tp-asset-section" id="sec-04" aria-labelledby="sec-04-title">
+  <div class="tp-section-heading">
+    <div><span class="tp-section-no">04</span><h2 id="sec-04-title">Development Platform &amp; Services</h2></div>
+    <p>자체 개발환경·비서·별도 서비스 제품군</p>
+    <span class="tp-count">6 assets</span>
+  </div>
+  <div class="tp-asset-grid">
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="the fa one-click connection v1 the_fa_one_click_connection_v1 프로젝트·방·core·source·개발환경을 한 흐름으로 연결하는 개발 연결·승계 오케스트레이션 계층. 개발 시작과 승계 준비 절차를 줄입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA One-Click Connection V1</h3>
+        <p class="tp-asset-key">THE_FA_ONE_CLICK_CONNECTION_V1</p>
+        <p class="tp-desc">프로젝트·방·Core·Source·개발환경을 한 흐름으로 연결하는 개발 연결·승계 오케스트레이션 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>개발 시작과 승계 준비 절차를 줄입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="the fa visual studio v1 the_fa_visual_studio_v1 실제 사이트를 화면으로 보며 수정하고 source·preview와 연결하는 the fa 자체 사이트 ai 편집기. 비개발자도 실제 화면을 기준으로 사이트를 수정·검토할 수 있게 합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA Visual Studio V1</h3>
+        <p class="tp-asset-key">THE_FA_VISUAL_STUDIO_V1</p>
+        <p class="tp-desc">실제 사이트를 화면으로 보며 수정하고 Source·Preview와 연결하는 THE FA 자체 사이트 AI 편집기.</p>
+        <div class="tp-effect"><span>회사 효과</span>비개발자도 실제 화면을 기준으로 사이트를 수정·검토할 수 있게 합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="hi the fa assistant v1 hi_the_fa_assistant_v1 일정·할일·음성·알람·예약·실행을 하나의 인터페이스로 묶는 개인/업무 실행형 assistant. 개인업무와 회사업무의 실행 자동화 기반을 만듭니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Hi THE FA Assistant V1</h3>
+        <p class="tp-asset-key">HI_THE_FA_ASSISTANT_V1</p>
+        <p class="tp-desc">일정·할일·음성·알람·예약·실행을 하나의 인터페이스로 묶는 개인/업무 실행형 Assistant.</p>
+        <div class="tp-effect"><span>회사 효과</span>개인업무와 회사업무의 실행 자동화 기반을 만듭니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="the fa persona brain v1 the_fa_persona_brain_v1 관계·말투·기억·안전보류·메신저 공통 상태를 여러 인터페이스가 공유하도록 하는 persona 기억층. 채널이 달라도 동일한 사용자 문맥과 관계기억을 유지합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA Persona Brain V1</h3>
+        <p class="tp-asset-key">THE_FA_PERSONA_BRAIN_V1</p>
+        <p class="tp-desc">관계·말투·기억·안전보류·메신저 공통 상태를 여러 인터페이스가 공유하도록 하는 Persona 기억층.</p>
+        <div class="tp-effect"><span>회사 효과</span>채널이 달라도 동일한 사용자 문맥과 관계기억을 유지합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="life blackbox v1 life_blackbox_v1 android ai 앱, 서명 연속성, secret vault, 사용량 guard, 배포기반을 포함한 모바일 제품 실험·출시 자산. 모바일 독립제품을 안전하게 빌드·배포할 수 있는 기반입니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>LIFE BLACKBOX V1</h3>
+        <p class="tp-asset-key">LIFE_BLACKBOX_V1</p>
+        <p class="tp-desc">Android AI 앱, 서명 연속성, Secret Vault, 사용량 Guard, 배포기반을 포함한 모바일 제품 실험·출시 자산.</p>
+        <div class="tp-effect"><span>회사 효과</span>모바일 독립제품을 안전하게 빌드·배포할 수 있는 기반입니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Development Platform &amp; Services" data-search="상미 v1 sangme_v1 추천·referral·reward·withdrawal·monetization을 포함하는 별도 소비자 추천 서비스. 단골리턴 외 별도 추천·제휴 수익 실험을 가능하게 합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>상미 V1</h3>
+        <p class="tp-asset-key">SANGME_V1</p>
+        <p class="tp-desc">추천·Referral·Reward·Withdrawal·Monetization을 포함하는 별도 소비자 추천 서비스.</p>
+        <div class="tp-effect"><span>회사 효과</span>단골리턴 외 별도 추천·제휴 수익 실험을 가능하게 합니다.</div>
+      </article>
+  </div>
+</section>
+
+<section class="tp-asset-section" id="sec-05" aria-labelledby="sec-05-title">
+  <div class="tp-section-heading">
+    <div><span class="tp-section-no">05</span><h2 id="sec-05-title">Dangolreturn Product</h2></div>
+    <p>고객신호 → 매장실행 → 실제 재방문을 연결하는 Customer Return OS</p>
+    <span class="tp-count">9 assets</span>
+  </div>
+  <div class="tp-asset-grid">
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="단골리턴 customer os v1 dangolreturn_customer_os_v1 qr·게임·reward·identity·consent·tap·고객 network를 묶은 고객 참여·재방문 경험 계층. 오프라인 고객의 참여·방문·관계 데이터를 확보합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>단골리턴 Customer OS V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_CUSTOMER_OS_V1</p>
+        <p class="tp-desc">QR·게임·Reward·Identity·Consent·Tap·고객 Network를 묶은 고객 참여·재방문 경험 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>오프라인 고객의 참여·방문·관계 데이터를 확보합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="단골리턴 owner os v1 dangolreturn_owner_os_v1 오늘·고객·action·live voc·loyalty·tap·운영관리·성과를 점주 한 화면에 연결하는 store os. 고객 신호부터 실행과 결과까지 점주가 관리합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>단골리턴 Owner OS V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_OWNER_OS_V1</p>
+        <p class="tp-desc">오늘·고객·Action·LIVE VOC·Loyalty·TAP·운영관리·성과를 점주 한 화면에 연결하는 Store OS.</p>
+        <div class="tp-effect"><span>회사 효과</span>고객 신호부터 실행과 결과까지 점주가 관리합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="단골리턴 hq os v1 dangolreturn_hq_os_v1 프랜차이즈 본사의 dashboard·store360·고객/live voc·hq action·캠페인·sv·비교분석을 묶은 본사 운영 os. 다점포/프랜차이즈 enterprise 운영 기반을 만듭니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>단골리턴 HQ OS V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_HQ_OS_V1</p>
+        <p class="tp-desc">프랜차이즈 본사의 Dashboard·Store360·고객/LIVE VOC·HQ Action·캠페인·SV·비교분석을 묶은 본사 운영 OS.</p>
+        <div class="tp-effect"><span>회사 효과</span>다점포/프랜차이즈 Enterprise 운영 기반을 만듭니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="단골리턴 live voc &amp; recovery v1 dangolreturn_live_voc_recovery_v1 익명 실시간 피드백→issue→점주 확인/처리→고객 확인으로 이어지는 고객 문제회복 흐름. 공개 리뷰·이탈 전에 매장 내부에서 문제를 발견하고 회복합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>단골리턴 LIVE VOC &amp; Recovery V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_LIVE_VOC_RECOVERY_V1</p>
+        <p class="tp-desc">익명 실시간 피드백→Issue→점주 확인/처리→고객 확인으로 이어지는 고객 문제회복 흐름.</p>
+        <div class="tp-effect"><span>회사 효과</span>공개 리뷰·이탈 전에 매장 내부에서 문제를 발견하고 회복합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="loyalty / tap / presence network v1 dangolreturn_loyalty_tap_presence_network_v1 tap·presence·방문 ledger·적립정책·고객 network를 연결해 실제 방문증거와 단골관계를 관리하는 기반. 디지털 반응과 실제 방문을 구분해 관계 데이터를 축적합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Loyalty / TAP / Presence Network V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_LOYALTY_TAP_PRESENCE_NETWORK_V1</p>
+        <p class="tp-desc">TAP·Presence·방문 Ledger·적립정책·고객 Network를 연결해 실제 방문증거와 단골관계를 관리하는 기반.</p>
+        <div class="tp-effect"><span>회사 효과</span>디지털 반응과 실제 방문을 구분해 관계 데이터를 축적합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="verified revisit &amp; action outcome v1 dangolreturn_verified_revisit_action_outcome_v1 action 실행과 outcome, 실제 검증 재방문을 연결하는 성과측정 계층. 메시지 발송·쿠폰 사용과 실제 재방문을 분리해 성과를 측정합니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Verified Revisit &amp; Action Outcome V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_VERIFIED_REVISIT_ACTION_OUTCOME_V1</p>
+        <p class="tp-desc">Action 실행과 Outcome, 실제 검증 재방문을 연결하는 성과측정 계층.</p>
+        <div class="tp-effect"><span>회사 효과</span>메시지 발송·쿠폰 사용과 실제 재방문을 분리해 성과를 측정합니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="messaging / credit / wallet / payment v1 dangolreturn_messaging_credit_wallet_payment_v1 메시징 실행·credit·wallet·payment를 연결하는 사용량 과금·수익화 기반. 알림톡/sms·충전·결제 기반의 반복매출 구조를 만듭니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Messaging / Credit / Wallet / Payment V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_MESSAGING_CREDIT_WALLET_PAYMENT_V1</p>
+        <p class="tp-desc">메시징 실행·Credit·Wallet·Payment를 연결하는 사용량 과금·수익화 기반.</p>
+        <div class="tp-effect"><span>회사 효과</span>알림톡/SMS·충전·결제 기반의 반복매출 구조를 만듭니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="IN_DEVELOPMENT" data-category="Dangolreturn Product" data-search="beauty vertical v1 dangolreturn_beauty_vertical_v1 미용업 사업자·디자이너·프리랜서·전문가 scope/권한을 확장하는 업종 vertical. 음식점·카페 외 미용업으로 제품 적용범위를 넓힙니다.">
+        <div class="tp-asset-top"><span class="tp-status dev">개발 중</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Beauty Vertical V1</h3>
+        <p class="tp-asset-key">DANGOLRETURN_BEAUTY_VERTICAL_V1</p>
+        <p class="tp-desc">미용업 사업자·디자이너·프리랜서·전문가 Scope/권한을 확장하는 업종 Vertical.</p>
+        <div class="tp-effect"><span>회사 효과</span>음식점·카페 외 미용업으로 제품 적용범위를 넓힙니다.</div>
+      </article>
+      <article class="tp-asset-card" data-status="REGRESSION_OPEN" data-category="Dangolreturn Product" data-search="점주 카카오 로그인 dangolreturn_owner_kakao_login 점주 카카오 소셜 로그인과 기존 고객 계정 연결 기능. google·naver와 함께 가입·로그인 선택지를 완성합니다.">
+        <div class="tp-asset-top"><span class="tp-status reg">회귀 수정</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>점주 카카오 로그인</h3>
+        <p class="tp-asset-key">DANGOLRETURN_OWNER_KAKAO_LOGIN</p>
+        <p class="tp-desc">점주 카카오 소셜 로그인과 기존 고객 계정 연결 기능.</p>
+        <div class="tp-effect"><span>회사 효과</span>Google·Naver와 함께 가입·로그인 선택지를 완성합니다.</div>
+      </article>
+  </div>
+</section>
+
+<section class="tp-candidate-zone" aria-labelledby="tp-candidates-title">
+  <h2 id="tp-candidates-title">Recovered / R&amp;D Candidates</h2>
+  <p class="tp-lead">공식 Registry와 분리된 회수·연구 자산입니다. 구현 흔적 또는 기획 근거는 있으나, 공식 상태로 과장하지 않고 검증대기/연구로 구분합니다.</p>
+  <div class="tp-candidate-grid">
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA AI Builder</h3>
+        <p class="tp-asset-key">THE_FA_AI_BUILDER_V1</p>
+        <p class="tp-desc">자연어 요구를 기반으로 웹사이트·서비스 생성/수정을 지원하는 개발엔진 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>THE FA AI Council</h3>
+        <p class="tp-asset-key">THE_FA_AI_COUNCIL_V1</p>
+        <p class="tp-desc">복수 분석 엔진이 같은 안건을 독립 검토하고 비교·종합하는 의사결정 기술 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>CEO AI Secretary</h3>
+        <p class="tp-asset-key">THE_FA_CEO_AI_SECRETARY_V1</p>
+        <p class="tp-desc">회사현황·일정·브리핑·업무지휘를 연결하는 대표 전용 Assistant 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Marketing Collector</h3>
+        <p class="tp-asset-key">THE_FA_MARKETING_COLLECTOR_V1</p>
+        <p class="tp-desc">기업/HQ Lead·홈페이지·이메일·전화·문의폼을 수집·검증·중복제거하는 영업 데이터 수집기 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Email &amp; Reply Automation</h3>
+        <p class="tp-asset-key">THE_FA_EMAIL_REPLY_AUTOMATION_V1</p>
+        <p class="tp-desc">문의·영업회신을 분류하고 승인형 답장·후속접촉을 생성하는 이메일 운영 자동화 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>Instagram Connector &amp; Growth</h3>
+        <p class="tp-asset-key">THE_FA_INSTAGRAM_CONNECTOR_GROWTH_AI_V1</p>
+        <p class="tp-desc">콘텐츠 제작·채널 연동·성과 피드백을 연결하는 소셜 성장기술 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status recovered">회수/검증대기</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>External Data Connectors</h3>
+        <p class="tp-asset-key">THE_FA_EXTERNAL_DATA_CONNECTORS_V1</p>
+        <p class="tp-desc">공공데이터·지도/리뷰·메시징·결제 등 외부 시스템을 공통 계약으로 연결하는 Connector 계층 후보.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status research">연구</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>Store Intelligence Platform</h3>
+        <p class="tp-asset-key">THE_FA_STORE_INTELLIGENCE_PLATFORM_V1</p>
+        <p class="tp-desc">매장 신호·실행·결과를 결합해 운영상태와 다음 실행을 설명하는 Store Intelligence 연구자산.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status research">연구</span><span class="tp-difficulty" aria-label="난이도 최상"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><b>최상</b></span></div>
+        <h3>FA Score Research</h3>
+        <p class="tp-asset-key">THE_FA_FA_SCORE_RESEARCH_V1</p>
+        <p class="tp-desc">장기 운영행동·실행·성과 데이터를 활용한 사업자 대안신용 연구자산.</p>
+      </article>
+      <article class="tp-candidate-card">
+        <div class="tp-asset-top"><span class="tp-status research">연구/보호</span><span class="tp-difficulty" aria-label="난이도 높음"><i class="on"></i><i class="on"></i><i class="on"></i><i class="on"></i><i></i><b>높음</b></span></div>
+        <h3>IP / Patent Portfolio</h3>
+        <p class="tp-asset-key">THE_FA_IP_PORTFOLIO_V1</p>
+        <p class="tp-desc">출원기술과 후속 발명후보를 제품개발과 연결해 관리하는 지식재산 포트폴리오.</p>
+      </article>
+  </div>
+  <details>
+    <summary>기타 회수 후보 Asset Key 보기 — 세부 기능 정의 검증 전</summary>
+    <div class="tp-candidate-tags"><span>THE_FA_AI_GENERATION_METADATA_V1</span><span>THE_FA_CANONICAL_BRAND_ASSET_REGISTRY_CURRENT</span><span>THE_FA_CEO_CORE_FAST_RESUME_DELTA_V1</span><span>THE_FA_CEO_DECISION_LEDGER_CURRENT</span><span>THE_FA_CUSTOMER_KAKAO_ENROLLMENT_V1</span><span>THE_FA_CUSTOMER_KAKAO_LINK_V1</span><span>THE_FA_CUSTOMER_KAKAO_RECOVERY_V1</span><span>THE_FA_CUSTOMER_QR_V1</span><span>THE_FA_EVIDENCE_SEMANTICS_V1</span><span>THE_FA_FREE_ANALYSIS_PHONE_V1</span><span>THE_FA_GUARDED_ACTION_BROKER_V1</span><span>THE_FA_HQ_PREVIEW_OUT</span><span>THE_FA_MANUAL_FRANCHISE_HQ_APPROVAL</span><span>THE_FA_QA_OWNER_AUTH</span><span>THE_FA_REPRESENTATIVE_DECISION_AND_CANONICAL_ASSET_LEDGER_CURRENT</span><span>THE_FA_TAP_V2</span><span>THE_FA_UNIVERSAL_AI_CONTEXT_V1</span><span>THE_FA_UNIVERSAL_AUTHORITATIVE_SOURCE_ROUTER</span><span>THE_FA_WORKFLOW_METADATA_V1</span></div>
+  </details>
+</section>
+
+<section class="tp-info-section" id="services" aria-labelledby="services-title">
+  <div class="tp-info-head"><h2 id="services-title">Services &amp; Domains</h2><p>운영 연결 / Review / Staging / 도메인 설계를 분리 표시</p></div>
+  <div class="tp-table-wrap">
+    <table>
+      <thead><tr><th>서비스</th><th>URL</th><th>상태</th><th>용도 / 확인사항</th></tr></thead>
+      <tbody>
+        <tr><td><strong>THE FA 공식 홈페이지</strong></td><td><a href="https://thefa.kr" target="_blank" rel="noopener">thefa.kr<span>↗</span></a></td><td><span class="tp-domain-status">공식 대표 도메인</span></td><td>대표님 확정 공식 홈페이지</td></tr>
+        <tr><td><strong>THE FA / 단골리턴 공개 사이트</strong></td><td><a href="https://thefa.co.kr" target="_blank" rel="noopener">thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">운영 연결</span></td><td>통합 제품 Runtime에 연결된 공개 도메인</td></tr>
+        <tr><td><strong>THE FA WWW Alias</strong></td><td><a href="https://www.thefa.co.kr" target="_blank" rel="noopener">www.thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">운영 연결</span></td><td>thefa.co.kr WWW 별칭</td></tr>
+        <tr><td><strong>단골리턴 서비스</strong></td><td><a href="https://dangol.thefa.co.kr" target="_blank" rel="noopener">dangol.thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">운영 도메인 연결</span></td><td>통합 제품 Runtime에 연결된 단골리턴 도메인</td></tr>
+        <tr><td><strong>상미</strong></td><td><a href="https://sangme.thefa.co.kr" target="_blank" rel="noopener">sangme.thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">배포 연결</span></td><td>상미 별도 서비스에 연결된 전용 도메인</td></tr>
+        <tr><td><strong>THE FA Visual Studio</strong></td><td><span class="tp-private">내부 전용</span></td><td><span class="tp-domain-status">배포 READY</span></td><td>Visual Studio 전용 배포 환경</td></tr>
+        <tr><td><strong>Visual Studio Custom Route</strong></td><td><a href="https://vs.thefa.co.kr" target="_blank" rel="noopener">vs.thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">구성 확인</span></td><td>GitHub routing 설정상 Cloudflare Worker로 연결되도록 구성</td></tr>
+        <tr><td><strong>Customer QR Public Review</strong></td><td><span class="tp-private">내부 전용</span></td><td><span class="tp-domain-status">Review</span></td><td>고객 QR 공개 검토용 배포</td></tr>
+        <tr><td><strong>Staging Runtime</strong></td><td><span class="tp-private">내부 전용</span></td><td><span class="tp-domain-status">Staging</span></td><td>THE FA 통합제품 Staging Runtime</td></tr>
+        <tr><td><strong>정부지원사업 RD</strong></td><td><a href="https://rd.thefa.co.kr" target="_blank" rel="noopener">rd.thefa.co.kr<span>↗</span></a></td><td><span class="tp-domain-status">도메인 설계</span></td><td>제품계획에 정의된 도메인. 현재 공개 Live로 확인하지 않음</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="tp-info-section" id="infra" aria-labelledby="infra-title">
+  <div class="tp-info-head"><h2 id="infra-title">Server &amp; Infrastructure</h2><p>Secret·Project ID·프로젝트명·Credential은 의도적으로 제외</p></div>
+  <div class="tp-table-wrap">
+    <table>
+      <thead><tr><th>인프라</th><th>역할</th><th>기술</th><th>담당 범위</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Vercel — 통합 제품 Runtime</strong></td><td>통합 제품 웹 Runtime</td><td>Next.js · Node 24.x</td><td>thefa.co.kr · www.thefa.co.kr · dangol.thefa.co.kr · Staging</td></tr>
+        <tr><td><strong>Vercel — Visual Studio</strong></td><td>Visual Studio 편집기 Runtime</td><td>Production target READY</td><td>전용 편집기 배포/검증 Runtime</td></tr>
+        <tr><td><strong>Vercel — SANGME</strong></td><td>상미 서비스 Runtime</td><td>Production deployment READY</td><td>sangme.thefa.co.kr custom domain 연결</td></tr>
+        <tr><td><strong>Vercel — Government RD</strong></td><td>정부지원사업 RD 개발 Runtime</td><td>Next.js · Node 24.x</td><td>개발 프로젝트. 현재 공개 Live 상태로 보지 않음</td></tr>
+        <tr><td><strong>Supabase</strong></td><td>DB · Auth · RPC · Queue/Data Plane</td><td>PostgreSQL / PLpgSQL</td><td>단골리턴·Core·Control Tower·Company Memory·RD 데이터 계층</td></tr>
+        <tr><td><strong>Cloudflare Workers</strong></td><td>Visual Studio Edge Route</td><td>Worker / Rewrite</td><td>vs.thefa.co.kr 라우팅 구성</td></tr>
+        <tr><td><strong>Google Cloud</strong></td><td>Central QA / Build / Fallback</td><td>Cloud Run · Build · QA</td><td>exact-head 검증·중앙 QA·fallback 경로</td></tr>
+        <tr><td><strong>GitHub</strong></td><td>통합 제품 소스 저장소 (비공개)</td><td>Source Authority</td><td>주요 제품·Core·Control Tower·자동화 코드</td></tr>
+        <tr><td><strong>GitHub</strong></td><td>상미 서비스 소스 저장소 (비공개)</td><td>Separate Service Repo</td><td>상미 별도 서비스 코드</td></tr>
+        <tr><td><strong>Representative QA PC</strong></td><td>Windows QA/Build Node</td><td>Local exact-head runner</td><td>중앙 PC QA Worker·로컬 검색·검증 수행</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section class="tp-info-section" id="tools" aria-labelledby="tools-title">
+  <div class="tp-info-head"><h2 id="tools-title">Development Toolchain</h2><p>외부 생성형 AI 제품명은 제외하고 실제 개발·QA·배포 도구만 표기</p></div>
+  <div class="tp-tool-grid"><div class="tp-tool-card"><strong>Git / GitHub</strong><span>버전관리·branch·Issue·PR·Fresh HEAD 기준</span></div><div class="tp-tool-card"><strong>Node.js / npm / npx</strong><span>웹 런타임·패키지·빌드 실행</span></div><div class="tp-tool-card"><strong>Next.js / TypeScript</strong><span>주요 웹 제품·내부 운영도구 프레임워크</span></div><div class="tp-tool-card"><strong>PostgreSQL / PLpgSQL</strong><span>Core·제품·자동화의 상태머신·RPC·데이터 계약</span></div><div class="tp-tool-card"><strong>Supabase CLI</strong><span>Staging migration·DB 개발·검증</span></div><div class="tp-tool-card"><strong>Vercel Runtime / CLI</strong><span>Preview·Staging·Production 배포 검증</span></div><div class="tp-tool-card"><strong>Google Cloud SDK</strong><span>Cloud Run·Build·중앙 QA 운영</span></div><div class="tp-tool-card"><strong>PowerShell</strong><span>Windows 자동화·QA Worker·로컬 운영 스크립트</span></div><div class="tp-tool-card"><strong>Python</strong><span>QA·복구·색인·자동화 보조도구</span></div><div class="tp-tool-card"><strong>Everything</strong><span>로컬 파일 경로 초고속 색인</span></div><div class="tp-tool-card"><strong>ripgrep</strong><span>대규모 코드/텍스트 내용검색</span></div></div>
+</section>
+
+<section class="tp-method" aria-labelledby="tp-governance-title">
+  <div>
+    <h2 id="tp-governance-title">Asset Governance</h2>
+    <p>새 개발품은 코드가 생겼다는 이유만으로 공식 자산이 되지 않습니다.</p>
+  </div>
+  <ol><li>기존 Canonical Asset / Alias 중복 확인</li><li>신규라면 Candidate Ledger에 등록</li><li>Fresh Source · Workstream · Owner 연결</li><li>개발 완료 후 exact-head QA 증거 연결</li><li>Runtime / Production 증거를 단계별 검증</li><li>Promotion Gate 통과 시 공식 Registry 승격</li><li>다른 개발방은 공식 자산을 우선 재사용</li></ol>
+</section>
+
+<div class="tp-footer">
+  <div class="tp-footer-row"><span>© 2026 THE FA · Technology &amp; Development Asset Portfolio</span><span>Basis: THE FA Core Asset Registry · Fresh GitHub · Runtime/QA Evidence · Connected deployment configuration · 외부 공유용 일부 내부 식별자는 중립 표기로 정규화</span></div>
+</div>
+</div>
+<!-- TECH-PORTFOLIO:END -->
+</main>
+
+<footer class="site-footer" role="contentinfo">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/approved/thefa-logo.png" alt="THE FA"/>
+        <p>오프라인 사업의 운영 신호를 검증 가능한 데이터와 실행으로 잇는 데이터 인프라를 연구·개발합니다.</p>
+        <address style="margin-top:18px;font-style:normal;font-size:13px;color:#8f9188;line-height:1.7">
+          주식회사 더파 (The FA Co., Ltd.) · 대표 최대희<br/>
+          사업자등록번호 186-87-03729<br/>
+          경기 성남시 분당구 판교역로10번길 6 (백현동)<br/>
+          전화 <a href="tel:0506-932-7908" style="color:inherit">0506-932-7908</a> ·
+          이메일 <a href="mailto:thefa@thefa.kr" style="color:inherit;text-decoration:underline">thefa@thefa.kr</a>
+        </address>
+      </div>
+      <div class="footer-col">
+        <h4>제품</h4>
+        <ul>
+          <li><a href="../products/dangolreturn.html">단골리턴</a></li>
+          <li><a href="../products/franchise-hq.html">프랜차이즈 본사</a></li>
+          <li><a href="../products/control-tower.html">Control Tower</a></li>
+          <li><a href="../products/gov-workspace.html">정부지원사업 업무센터</a></li>
+          <li><a href="../products/hi-the-fa.html">하이 더파</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>더 보기</h4>
+        <ul>
+          <li><a href="../products/ai-persona.html">인공지능 분신·톡비서</a></li>
+          <li><a href="../products/visual-studio.html">Visual Studio</a></li>
+          <li><a href="../products/sangmi.html">상미 <span style="color:var(--muted);font-size:11px">· 스타일 버전 확장</span></a></li>
+          <li><a href="../products/sangmi-2.html">상미 2.0 토탈 스타일 (시안)</a></li>
+          <li><a href="../products/ai-marketing.html">마케팅·소셜 성장</a></li>
+          <li><a href="../products/payments-finance.html">결제·크레딧·정산</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>회사</h4>
+        <ul>
+          <li><a href="../index.html#patents">기술 자산 · 특허출원 4건</a></li>
+          <li><a href="../index.html#research">R&amp;D</a></li>
+          <li><a href="../index.html#company">회사 소개</a></li>
+          <li><a href="../contact.html">협력 문의</a></li>
+          <li><a href="../privacy.html">개인정보처리방침</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 주식회사 더파 · The FA Co., Ltd. All rights reserved.</div>
+      <div class="legal">
+        <span>기준일 2026·09·14</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="../app.js?v=4a"></script>
+<script src="portfolio.js?v=1"></script>
+</body>
+</html>
