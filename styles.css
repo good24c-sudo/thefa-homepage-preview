@@ -1484,3 +1484,109 @@ button { font: inherit; cursor: pointer; }
 .style-shots figcaption b { color: var(--ink-2); font-size: 13px; display: block; margin-bottom: 2px; }
 @media (max-width: 900px) { .style-ext-grid { grid-template-columns: 1fr; gap: 32px; } }
 @media (max-width: 480px) { .style-shots { grid-template-columns: 1fr; } }
+
+
+/* ============================================================
+   THE FA Core — 신규 서비스 소개
+   본사 사이트의 기존 토큰(.section.dark 계열 색, --gold, --radius)만
+   사용합니다. 새 색이나 새 폰트를 도입하지 않으며, 애니메이션은
+   기존 .btn hover 외에 추가하지 않습니다.
+   ============================================================ */
+
+.core-intro {
+  background: var(--dark-bg);
+  color: #e8ebe6;
+  border-top-color: rgba(255, 255, 255, .06);
+}
+
+.core-band {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 5vw, 72px);
+  align-items: start;
+}
+@media (max-width: 900px) {
+  .core-band { grid-template-columns: minmax(0, 1fr); gap: 36px; }
+}
+
+.core-intro .section-eyebrow { color: #c8cac4; }
+
+/* 공식 Core 가로 락업. 1800x500 비율을 그대로 두고 높이만 제어합니다. */
+.core-logo {
+  display: block;
+  width: auto;
+  height: clamp(40px, 5.2vw, 62px);
+  margin: 18px 0 0;
+}
+
+.core-line {
+  margin: 16px 0 0;
+  font-size: 14px;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.core-lede {
+  margin: 20px 0 0;
+  font-size: clamp(16px, 1.1vw, 18px);
+  line-height: 1.8;
+  color: #b8bcb4;
+  max-width: 54ch;
+}
+.core-lede b { color: #fbfaf5; font-weight: 600; }
+
+.core-intro .cta-row { margin-top: 30px; }
+
+.core-values {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1px;
+  background: var(--dark-line);
+  border: 1px solid var(--dark-line);
+  border-radius: var(--radius);
+  overflow: hidden;
+}
+.core-values > li {
+  background: var(--dark-surface);
+  padding: clamp(18px, 2vw, 24px);
+  display: grid;
+  gap: 8px;
+  align-content: start;
+  min-width: 0;
+}
+.cv-no {
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--gold);
+}
+.core-values b {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fbfaf5;
+  letter-spacing: -.01em;
+}
+.core-values p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.75;
+  color: #a8ada6;
+}
+
+.core-note {
+  margin: clamp(28px, 3.4vw, 44px) 0 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, .08);
+  font-size: 13px;
+  line-height: 1.75;
+  color: #8f948c;
+  max-width: 76ch;
+}
+
+/* 좁은 화면에서 로고가 과도하게 작아지지 않도록 하한을 둡니다 */
+@media (max-width: 420px) {
+  .core-logo { height: 38px; }
+  .core-intro .cta-row .btn { width: 100%; justify-content: center; }
+}
